@@ -43,21 +43,7 @@
 </head>
 <body>
 
-    <div id="menu">
-        <input type="checkbox" id="checkbox"/>
-        <label class="burger" for="checkbox"><span class="hamburguesa">☰</span></label>
-        <div id="lista">
-            <ul class="dropdown">
-                <li><a href="Inicio.ftl">Inicio</a></li>
-                <li><a href="GrandPrix.ftl">Grand Prix</a></li>
-                <li><a href="Equipos.ftl">Equipos</a></li>
-                <li><a href="Clasificacion.ftl">Clasificación</a></li>
-            </ul>
-        </div>
-        <img src="img\Iconos\logooo.png" class="menu_img1">
-        <img src="img\Iconos\perfil.png" class="menu_img2">
-    </div>
-
+    <#include "menu.ftl">
 
     <div>
         <img src="img\Piloto-piloto\maxVers.png" width="300vh">
