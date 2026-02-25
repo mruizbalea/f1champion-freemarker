@@ -1,5 +1,6 @@
 package edu.masanz.f1champion;
 
+import edu.masanz.f1champion.database.ConnectionManager;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
 import io.javalin.rendering.template.JavalinFreemarker;
@@ -18,6 +19,8 @@ public class Main {
     public static void main(String[] args) {
 
         logger.info("ARRANCANDO APLICACION");
+
+        ConnectionManager.conectar("nombredelabase", "root", "roo7");
 
         Javalin app = Javalin.create(config -> {
             config.staticFiles.add("public");
