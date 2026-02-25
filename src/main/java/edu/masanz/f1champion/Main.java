@@ -29,15 +29,27 @@ public class Main {
 
         // PRINCIPAL
         app.get("/", Main::ejemplo);
+        app.get("/login/error", Main::error);
+        app.get("/login/correcto", Main::correcto);
 
     }
 
-    private static void ejemplo(@NotNull Context context) {
-
+    private static void correcto(@NotNull Context context) {
         Map<String, Object> model = new HashMap<>();
 
         context.render("/templates/index.ftl");
+    }
 
+    private static void error(@NotNull Context context) {
+        Map<String, Object> model = new HashMap<>();
+
+        context.render("/templates/index.ftl");
+    }
+
+    private static void ejemplo(@NotNull Context context) {
+        Map<String, Object> model = new HashMap<>();
+
+        context.render("/templates/index.ftl");
     }
 
 }
