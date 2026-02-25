@@ -30,20 +30,20 @@ public class Main {
         // PRINCIPAL
         app.get("/", Main::ejemplo);
         app.get("/login/error", Main::error);
-        app.get("/login/correcto", Main::correcto);
+        app.get("/inicio", Main::correcto);
 
     }
 
     private static void correcto(@NotNull Context context) {
         Map<String, Object> model = new HashMap<>();
 
-        context.render("/templates/index.ftl");
+        context.render("/templates/inicio.ftl");
     }
 
     private static void error(@NotNull Context context) {
         Map<String, Object> model = new HashMap<>();
 
-        context.render("/templates/index.ftl");
+        context.render("/templates/errorlogin.ftl");
     }
 
     private static void ejemplo(@NotNull Context context) {
