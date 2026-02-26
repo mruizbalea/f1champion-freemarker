@@ -10,6 +10,7 @@ import java.util.Map;
 public class UsersDao {
 
     public static Map<Integer, User> usuario;
+    public static int contador;
 
     public static User obtenerUsuario(int id) {
         return usuario.get(id);
@@ -21,7 +22,7 @@ public class UsersDao {
         Object[][] result = ConnectionManager.ejecutarSelectSQL(select, params);
         if (result!=null){
 
-            User user = ;
+            User user = new User((int)result[0][0], (String)result[0][1], (String)result[0][2], (int)result[0][3]);
             return user;
         }
         return null;
@@ -32,5 +33,21 @@ public class UsersDao {
         List<User> usuarios = new ArrayList<>(usuario.values());
 
         return usuarios;
+    }
+
+    public static void actualizarUsuario(User user) {
+
+    }
+
+
+    public static void eliminarUsuario(int id) {
+        usuario.remove(id);
+    }
+
+
+    public static void crearUsuario(String nombreUsuario, String contrasenaUsuario, int rolUsuario) {
+        User user = new User(contador, nombreUsuario, contrasenaUsuario, rolUsuario);
+        usuario.put(contador, user);
+        contador++;
     }
 }

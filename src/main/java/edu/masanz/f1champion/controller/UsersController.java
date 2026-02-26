@@ -37,43 +37,30 @@ public class UsersController {
         context.render("templates/inventario/form-item.ftl", model);
     }
 
-    public static void editarItem(Context context) {
+    public static void editarUsuario(Context context) {
         int id = Integer.parseInt(context.pathParam("id"));
         String nombre = context.formParam("nombre");
-        int cantidad = Integer.parseInt(context.formParam("cantidad"));
+        String password = context.formParam("password");
+        int rol = Integer.parseInt(context.pathParam("rol"));
 
-        UploadedFile imagen = context.uploadedFile("imagen");
-        System.out.println(imagen.toString());
-
-        InventarioDao.actualizarItem(new Item(id, nombre, cantidad));
+        UsersDao.actualizarUsuario(new User(id, nombre, password, rol));
 
         context.redirect("/lista-items");
     }
 
-    public static void crearItem(Context context) {
-        String nombreItem = context.formParam("nombre");
-        int cantidad = Integer.parseInt(context.formParam("cantidad"));
-        String textoImagen = "";
+    public static void crearUsuario(Context context) {
+        String nombreUsuario = context.formParam("nombre");
+        String contrasenaUsuario = context.formParam("contraseña");
+        int rolUsuario = Integer.parseInt(context.pathParam("rol"));
 
-        UploadedFile archivo = context.uploadedFile("imagen");
-        if (archivo != null) {
-            try {
-                byte[] contenido = archivo.content().readAllBytes();
-                String encodedString = Base64.getEncoder().encodeToString(contenido);
-                textoImagen = "data:image/png;base64,"+encodedString;
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        }
-
-        InventarioDao.crearItem(nombreItem, cantidad, textoImagen);
+        UsersDao.crearUsuario(nombreUsuario, contrasenaUsuario, rolUsuario);
 
         context.redirect("/lista-items");
     }
 
-    public static void eliminarItem(Context context) {
+    public static void eliminarUsuario(Context context) {
         int id = Integer.parseInt(context.pathParam("id"));
-        InventarioDao.eliminarItem(id);
+        UsersDao.eliminarUsuario(id);
         context.redirect("/lista-items");
     }
 }
