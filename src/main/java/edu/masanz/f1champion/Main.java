@@ -1,5 +1,6 @@
 package edu.masanz.f1champion;
 
+import edu.masanz.f1champion.controller.UsersController;
 import edu.masanz.f1champion.database.ConnectionManager;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
@@ -31,6 +32,12 @@ public class Main {
         app.get("/", Main::ejemplo);
         app.get("/login/error", Main::error);
         app.get("/inicio", Main::correcto);
+        app.get("/lista-usuarios", UsersController::listarUsuario);
+        app.get("/edita-usuario/{id}", UsersController::servirUsuario);
+        app.post("/edita-usuario/{id}", UsersController::editarUsuario);
+        app.get("/crea-usuario", UsersController::servirUsuario);
+        app.post("/crea-usuario", UsersController::crearUsuario);
+        app.get("/elimina-usuario/{id}", UsersController::eliminarUsuario);
 
     }
 
