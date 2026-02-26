@@ -49,21 +49,21 @@
     <div>
         <img src="img\Iconos\formula1.jpg" class="fondo"><br>
         <div>
-            <p>Qué quieres hacer?</p>
+            <p>¿Qué quieres hacer?</p>
         </div>
         
 
         <div>
-            <a href="GrandPrix.ftl" class="boton">Grand Prix</a>
+            <a href="/grandprix" class="boton">Grand Prix</a>
         </div>
         <div>
-            <a href="Equipos.ftl" class="boton">Equipos</a>
+            <a href="/equipos" class="boton">Equipos</a>
         </div>
         <div>
-            <a href="Pilotos.html" class="boton">Pilotos</a>
+            <a href="/pilotos" class="boton">Pilotos</a>
         </div>
         <div>
-            <a href="Clasificacion.ftl" class="boton">Clasificación</a>
+            <a href="/clasificacion" class="boton">Clasificación</a>
         </div>  
     </div>
               
