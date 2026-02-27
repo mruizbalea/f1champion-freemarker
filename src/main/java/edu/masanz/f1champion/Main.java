@@ -29,7 +29,7 @@ public class Main {
         }).start(8080);
 
         // PRINCIPAL
-        app.get("/", Main::ejemplo);
+        app.get("/", Main::login);
         app.get("/login/error", Main::error);
         app.get("/inicio", Main::correcto);
         app.get("/lista-usuarios", UsersController::listarUsuario);
@@ -38,6 +38,7 @@ public class Main {
         app.get("/crea-usuario", UsersController::servirUsuario);
         app.post("/crea-usuario", UsersController::crearUsuario);
         app.get("/elimina-usuario/{id}", UsersController::eliminarUsuario);
+        app.get("/irAInicio", UsersController::irAInicio);
 
     }
 
@@ -53,10 +54,10 @@ public class Main {
         context.render("/templates/errorlogin.ftl");
     }
 
-    private static void ejemplo(@NotNull Context context) {
+    private static void login(@NotNull Context context) {
         Map<String, Object> model = new HashMap<>();
 
-        context.render("/templates/index.ftl");
+        context.render("/templates/login.ftl");
     }
 
 }

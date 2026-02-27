@@ -30,7 +30,7 @@ public class UsersController {
         Map<String, String> pathParams = context.pathParamMap();
         if(pathParams.containsKey("id")){
             int id = Integer.parseInt(context.pathParam("id"));
-            User item = UsersDao.obtenerUsuario(id);
+            User usuario = UsersDao.obtenerUsuario(id);
             model.put("usuario", usuario);
         }
 
@@ -38,7 +38,7 @@ public class UsersController {
     }
 
     public static void editarUsuario(Context context) {
-        int id = Integer.parseInt(context.pathParam("id"));
+        Long id = (context.pathParam("id"));
         String nombre = context.formParam("nombre");
         String password = context.formParam("password");
         int rol = Integer.parseInt(context.pathParam("rol"));
@@ -62,5 +62,11 @@ public class UsersController {
         int id = Integer.parseInt(context.pathParam("id"));
         UsersDao.eliminarUsuario(id);
         context.redirect("/lista-items");
+    }
+
+    public static void irAInicio(Context context){
+
+
+        context.render("/inicio");
     }
 }
