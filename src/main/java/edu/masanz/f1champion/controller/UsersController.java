@@ -38,12 +38,12 @@ public class UsersController {
     }
 
     public static void editarUsuario(Context context) {
-        Long id = (context.pathParam("id"));
+        int id = Integer.parseInt(context.pathParam("id"));
         String nombre = context.formParam("nombre");
         String password = context.formParam("password");
         int rol = Integer.parseInt(context.pathParam("rol"));
 
-        UsersDao.actualizarUsuario(new User(id, nombre, password, rol));
+        UsersDao.actualizarUsuario(new User((long) id, nombre, password, rol));
 
         context.redirect("/lista-items");
     }
