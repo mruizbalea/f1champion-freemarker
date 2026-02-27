@@ -39,7 +39,7 @@ public class UsersDao {
         return 0;
     }
 
-    public List<User> obtenerUsuarios(int pagina, int notasPorPagina) {
+    public static List<User> obtenerUsuarios(int pagina, int notasPorPagina) {
         String sql = "SELECT id, username, password, rol " +
                 "FROM usuarios ORDER BY id DESC LIMIT ? OFFSET ?";
         Long limite = (long) notasPorPagina;
@@ -80,7 +80,7 @@ public class UsersDao {
         return null;
     }
 
-    public User guardarUser(User user) {
+    public static User guardarUser(User user) {
         String sql = "INSERT INTO usuarios (username, password, rol) VALUES (?, ?, ?)";
         Object[] params = {user.getUsername(), user.getPassword(), user.getRol()};
         long id = ConnectionManager.ejecutarInsertSQL(sql, params);
@@ -90,42 +90,17 @@ public class UsersDao {
         return user;
     }
 
-    public boolean actualizarNota(Nota nota) {
-        String sql = "UPDATE notas SET titulo = ?, contenido = ?, modificado = ? WHERE id = ?";
-        Object[] params = {nota.getTitulo(), nota.getContenido(), nota.getModificado(), nota.getId()};
+    public static boolean actualizarUsuario(User user) {
+        String sql = "UPDATE usuarios SET username = ?, password = ?, rol = ? WHERE id = ?";
+        Object[] params = {user.getUsername(), user.getPassword(), user.getRol(), user.getId()};
         ConnectionManager.ejecutarUpdateSQL(sql, params);
         return true;
     }
 
-    public boolean eliminarNota(long idNota) {
-        String sql = "DELETE FROM notas WHERE id = ?";
-        Object[] params = {idNota};
+    public static boolean eliminarUsuario(long id) {
+        String sql = "DELETE FROM usuarios WHERE id = ?";
+        Object[] params = {id};
         ConnectionManager.ejecutarUpdateSQL(sql, params);
         return true;
-    }
-
-    public static List<User> obtenerUsuarios() {
-
-        List<User> usuarios = new ArrayList<>(usuario.values());
-
-        return usuarios;
-    }
-
-    public static void actualizarUsuario(User user) {
-        if(usuario.containsKey(user.getId())){
-            usuario.put(user.getId(), user);
-        }
-    }
-
-
-    public static void eliminarUsuario(int id) {
-        usuario.remove(id);
-    }
-
-
-    public static void crearUsuario(String nombreUsuario, String contrasenaUsuario, int rolUsuario) {
-        User user = new User(contador, nombreUsuario, contrasenaUsuario, rolUsuario);
-        usuario.put(contador, user);
-        contador++;
     }
 }

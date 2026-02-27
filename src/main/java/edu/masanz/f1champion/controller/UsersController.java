@@ -48,16 +48,6 @@ public class UsersController {
         context.redirect("/lista-items");
     }
 
-    public static void crearUsuario(Context context) {
-        String nombreUsuario = context.formParam("nombre");
-        String contrasenaUsuario = context.formParam("contraseña");
-        int rolUsuario = Integer.parseInt(context.pathParam("rol"));
-
-        UsersDao.crearUsuario(nombreUsuario, contrasenaUsuario, rolUsuario);
-
-        context.redirect("/lista-items");
-    }
-
     public static void eliminarUsuario(Context context) {
         int id = Integer.parseInt(context.pathParam("id"));
         UsersDao.eliminarUsuario(id);
