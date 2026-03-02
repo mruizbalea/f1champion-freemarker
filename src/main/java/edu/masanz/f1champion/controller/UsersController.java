@@ -4,6 +4,7 @@ import edu.masanz.f1champion.dao.UsersDao;
 import edu.masanz.f1champion.model.User;
 import io.javalin.http.Context;
 import io.javalin.http.UploadedFile;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 import java.util.Base64;
@@ -15,6 +16,50 @@ import static edu.masanz.f1champion.dao.UsersDao.usuario;
 
 public class UsersController {
 
+    public static boolean AUTENCTICADO = false;
+    // private static NotaService notaService = new NotaService();
+
+    public static void accederLogin(@NotNull Context context) {
+
+        context.render("/templates/login.ftl");
+    }
+
+    public static void login(@NotNull Context context) {
+
+        String username = context.formParam("username");
+        String password = context.formParam("password");
+
+        if (username.equals("admin") && password.equals("admin")) {
+            AUTENCTICADO = true;
+            context.redirect("/templates/inicio");
+        } else {
+            context.redirect("/templates/login");
+        }
+
+    }
+/*
+    public static void servirLista(Context context){
+        Map<String, Object> model = new HashMap<>();
+        Integer numeroPagina = 1;
+        try {
+            numeroPagina = Integer.parseInt(context.queryParam("pagina"));
+        } catch (NumberFormatException e) { }
+        int numeroNotas = notaService.obtenerNumeroNotas();
+        Boolean tieneAnterior = numeroPagina > 1;
+        Boolean tieneSiguiente = (numeroPagina * NOTAS_POR_PAGINA) < numeroNotas;
+
+        model.put("numeroPagina", numeroPagina);
+        model.put("tieneAnterior", tieneAnterior);
+        model.put("paginaAnterior", numeroPagina - 1);
+        model.put("tieneSiguiente", tieneSiguiente);
+        model.put("paginaSiguiente", numeroPagina + 1);
+
+        // me llega un array list de tipo NOTA
+        model.put("notas", notaService.obtenerNotas(numeroPagina, NOTAS_POR_PAGINA));
+
+        context.render("templates/lista-notas.ftl", model);
+    }
+
     public static void listarUsuario(Context context) {
         Map<String, Object> model = new HashMap<>();
 
@@ -23,7 +68,7 @@ public class UsersController {
 
         context.render("templates/login.ftl", model);
     }
-
+*/
     public static void servirUsuario(Context context) {
         Map<String, Object> model = new HashMap<>();
 

@@ -39,11 +39,11 @@ public class UsersDao {
         return 0;
     }
 
-    public static List<User> obtenerUsuarios(int pagina, int notasPorPagina) {
+    public static List<User> obtenerUsuarios(int pagina, int usuariosPorPagina) {
         String sql = "SELECT id, username, password, rol " +
                 "FROM usuarios ORDER BY id DESC LIMIT ? OFFSET ?";
-        Long limite = (long) notasPorPagina;
-        Long offset = (long) ((pagina-1)*notasPorPagina);
+        Long limite = (long) usuariosPorPagina;
+        Long offset = (long) ((pagina-1)*usuariosPorPagina);
         Object[] params = {limite, offset};
         Object[][] resultado = ConnectionManager.ejecutarSelectSQL(sql, params);
         List<User> users = new ArrayList<>();

@@ -1,6 +1,7 @@
 package edu.masanz.f1champion;
 
 import edu.masanz.f1champion.controller.UsersController;
+import edu.masanz.f1champion.controller.FiltroController;
 import edu.masanz.f1champion.database.ConnectionManager;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
@@ -28,17 +29,29 @@ public class Main {
             config.fileRenderer(new JavalinFreemarker());
         }).start(8080);
 
+        app.before("/*", FiltroController::filtroBefore);
+        app.before("/usuarios*", FiltroController::filtroBefore);
+        app.before("/edita-nota*", FiltroController::filtroBefore);
+        app.before("/elimina-nota*", FiltroController::filtroBefore);
+
+        app.get("/login", UsersController::accederLogin);
+        app.post("/login", UsersController::login);
+
+
         // PRINCIPAL
         app.get("/", Main::login);
         app.get("/login/error", Main::error);
         app.get("/inicio", Main::correcto);
-        app.get("/lista-usuarios", UsersController::listarUsuario);
+        // app.get("/lista-usuarios", UsersController::listarUsuario);
         app.get("/edita-usuario/{id}", UsersController::servirUsuario);
         app.post("/edita-usuario/{id}", UsersController::editarUsuario);
         app.get("/crea-usuario", UsersController::servirUsuario);
-        app.post("/crea-usuario", UsersController::crearUsuario);
+        // app.post("/crea-usuario", UsersController::crearUsuario);
         app.get("/elimina-usuario/{id}", UsersController::eliminarUsuario);
         app.get("/irAInicio", UsersController::irAInicio);
+
+        app.after("*", FiltroController::filtroAfter);
+
 
     }
 

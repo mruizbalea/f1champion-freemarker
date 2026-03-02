@@ -121,13 +121,12 @@
         <img src="img\Iconos\logooo.png" alt="logo_f1" width="300" height="300">
 
         <div class="form">
-            <form action="">
-                <label for="Email" class="labels">Email</label><br>
-                <input type="text" placeholder="tu.correo@ejemplo.com"><br><br>
-                <label for="Contraseña" class="labels">Contraseña</label><br>
-                <input type="password" placeholder="********"><br>
-            </form>
-
+             <form method="post" action="/login">
+                 <label for="Email" class="labels">Email</label><br>
+                 <input name="username" type="text" placeholder="tu.correo@ejemplo.com"><br><br>
+                 <label for="Contraseña" class="labels">Contraseña</label><br>
+                 <input name="password" type="password" placeholder="********"><br>
+             </form>
         </div>
 
         <div class="sesion_div">
