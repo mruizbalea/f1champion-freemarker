@@ -5,30 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b3513a4-6c54-4a96-bbc3-9fa61fdb53b2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/console.log" beforeDir="false" afterPath="$PROJECT_DIR$/console.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/controller/FiltroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/controller/FiltroController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/controller/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/clasificacion.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/clasificacion.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/equipo.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/equipo.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/equipos.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/equipos.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/errorlogin.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/gpaustralia.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/gpaustralia.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/grandprix.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/grandprix.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/inicio.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/inicio.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/menu.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/menu.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/piloto.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/piloto.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pilotos.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pilotos.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/controller/FiltroController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/controller/FiltroController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/controller/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/controller/UsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/errorlogin.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/inicio.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/inicio.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/dao/UsersDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/dao/UsersDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/service/UserService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +33,7 @@
     "Application.Main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",

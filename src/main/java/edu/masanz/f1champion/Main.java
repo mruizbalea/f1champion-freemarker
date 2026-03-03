@@ -38,6 +38,7 @@ public class Main {
         app.get("/grand-prix", UsersController::accederGrandPrix);
         app.get("/equipos", UsersController::accederEquipos);
         app.get("/clasificacion", UsersController::accederClasificacion);
+        app.get("/pilotos", UsersController::accederPilotos);
 
 
         // PRINCIPAL

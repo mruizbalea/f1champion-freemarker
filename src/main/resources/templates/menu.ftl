@@ -7,6 +7,7 @@
             <li><a href="/grand-prix">Grand Prix</a></li>
             <li><a href="/equipos">Equipos</a></li>
             <li><a href="/clasificacion">Clasificación</a></li>
+            <li><a href="/pilotos">Pilotos</a></li>
         </ul>
     </div>
     <img src="img\Iconos\logooo.png" class="menu_img1">
