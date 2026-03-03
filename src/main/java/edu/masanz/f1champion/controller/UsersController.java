@@ -1,5 +1,6 @@
 package edu.masanz.f1champion.controller;
 
+import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import edu.masanz.f1champion.dao.UsersDao;
 import edu.masanz.f1champion.model.User;
 import io.javalin.http.Context;

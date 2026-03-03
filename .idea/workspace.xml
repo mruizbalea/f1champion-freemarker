@@ -5,30 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b3513a4-6c54-4a96-bbc3-9fa61fdb53b2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/console.log" beforeDir="false" afterPath="$PROJECT_DIR$/console.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/controller/FiltroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/controller/FiltroController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/controller/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/clasificacion.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/clasificacion.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/equipo.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/equipo.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/equipos.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/equipos.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/errorlogin.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/gpaustralia.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/gpaustralia.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/grandprix.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/grandprix.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/inicio.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/inicio.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/menu.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/menu.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/piloto.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/piloto.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pilotos.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pilotos.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/controller/FiltroController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/controller/FiltroController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/controller/UsersController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/controller/UsersController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/errorlogin.ftl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/inicio.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/inicio.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,25 +17,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="3AQpxGpspDnD4wAS3D8DSRf5GjN" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mruizbalea/Clase/Lenguajes de marcas/Proyecto4/f1champion-freemarker"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mruizbalea/Clase/Lenguajes de marcas/Proyecto4/f1champion-freemarker&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.masanz.f1champion.Main" />

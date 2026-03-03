@@ -1,0 +1,109 @@
+Index: src/main/java/edu/masanz/f1champion/dao/UsersDao.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package edu.masanz.f1champion.dao;\r\n\r\nimport edu.masanz.f1champion.database.ConnectionManager;\r\nimport edu.masanz.f1champion.model.User;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\nimport java.util.Map;\r\n\r\npublic class UsersDao {\r\n\r\n    public static Map<Integer, User> usuario;\r\n    public static int contador;\r\n\r\n    public static User obtenerUsuario(int id) {\r\n        return usuario.get(id);\r\n    }\r\n\r\n    public static User login(String username, String password){\r\n        String select = \"select * from basededatos where username = ? and password = ?\";\r\n        Object[] params = {username, password};\r\n        Object[][] result = ConnectionManager.ejecutarSelectSQL(select, params);\r\n        if (result!=null){\r\n\r\n            User user = new User((int)result[0][0], (String)result[0][1], (String)result[0][2], (int)result[0][3]);\r\n            return user;\r\n        }\r\n        return null;\r\n    }\r\n\r\n    public static List<User> obtenerUsuarios() {\r\n\r\n        List<User> usuarios = new ArrayList<>(usuario.values());\r\n\r\n        return usuarios;\r\n    }\r\n\r\n    public static void actualizarUsuario(User user) {\r\n\r\n    }\r\n\r\n\r\n    public static void eliminarUsuario(int id) {\r\n        usuario.remove(id);\r\n    }\r\n\r\n\r\n    public static void crearUsuario(String nombreUsuario, String contrasenaUsuario, int rolUsuario) {\r\n        User user = new User(contador, nombreUsuario, contrasenaUsuario, rolUsuario);\r\n        usuario.put(contador, user);\r\n        contador++;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/edu/masanz/f1champion/dao/UsersDao.java b/src/main/java/edu/masanz/f1champion/dao/UsersDao.java
+--- a/src/main/java/edu/masanz/f1champion/dao/UsersDao.java	(revision c8fbe2a3ce2b109b1e5cff7030c187f6a7778c0d)
++++ b/src/main/java/edu/masanz/f1champion/dao/UsersDao.java	(date 1772182503892)
+@@ -4,6 +4,7 @@
+ import edu.masanz.f1champion.model.User;
+ 
+ import java.util.ArrayList;
++import java.util.HashMap;
+ import java.util.List;
+ import java.util.Map;
+ 
+@@ -35,19 +36,35 @@
+         return usuarios;
+     }
+ 
+-    public static void actualizarUsuario(User user) {
++    public static boolean actualizarUsuario(User user) {
+ 
++        return false;
+     }
+-
+-
+-    public static void eliminarUsuario(int id) {
++    
++    public static boolean eliminarUsuario(int id) {
+         usuario.remove(id);
++        return false;
+     }
+-
+-
++    
+     public static void crearUsuario(String nombreUsuario, String contrasenaUsuario, int rolUsuario) {
+         User user = new User(contador, nombreUsuario, contrasenaUsuario, rolUsuario);
+         usuario.put(contador, user);
+         contador++;
+     }
++
++    public static int obtenerNumeroUsuarios() {
++        return 0;
++    }
++
++    public static User validarCredenciales(String nombreUsuario, String password) {
++
++        User usuario = login(nombreUsuario, password);
++        return usuario;
++    }
++
++    public static User guardarUsuario(User u) {
++
++        usuario.put(u.getId(), u);
++        return u;
++    }
+ }
+Index: src/main/java/edu/masanz/f1champion/service/UserService.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package edu.masanz.f1champion.service;\r\n\r\npublic class UserService {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/edu/masanz/f1champion/service/UserService.java b/src/main/java/edu/masanz/f1champion/service/UserService.java
+--- a/src/main/java/edu/masanz/f1champion/service/UserService.java	(revision c8fbe2a3ce2b109b1e5cff7030c187f6a7778c0d)
++++ b/src/main/java/edu/masanz/f1champion/service/UserService.java	(date 1772181865354)
+@@ -1,4 +1,37 @@
+ package edu.masanz.f1champion.service;
+ 
++import edu.masanz.f1champion.dao.UsersDao;
++import edu.masanz.f1champion.model.User;
++
++import java.util.List;
++
+ public class UserService {
+-}
++
++        public int obtenerNumeroUsuarios() {
++            return UsersDao.obtenerNumeroUsuarios();
++        }
++
++        public List<User> obtenerUsuarios(int pagina, int usuariosPorPagina) {
++            return UsersDao.obtenerUsuarios();
++        }
++
++        public User obtenerUsuario(int idUsuario) {
++            return UsersDao.obtenerUsuario(idUsuario);
++        }
++
++        public User crearUsuario(User usuario) {
++            return UsersDao.guardarUsuario(usuario);
++        }
++
++        public boolean actualizarUsuario(User usuario) {
++            return UsersDao.actualizarUsuario(usuario);
++        }
++
++        public boolean eliminarUsuario(int idUsuario) {
++            return UsersDao.eliminarUsuario(idUsuario);
++        }
++
++        public User autenticar(String nombreUsuario, String password) {
++            return UsersDao.validarCredenciales(nombreUsuario, password);
++        }
++    }
