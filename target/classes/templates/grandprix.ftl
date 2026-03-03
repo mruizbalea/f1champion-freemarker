@@ -88,9 +88,7 @@
         </div>
         
 
-        <div>
-            <a href="Inicio.html" class="boton">Volver al Inicio</a>
-        </div>
+        <#include "volverinicio.ftl">
     </div>
         
 </body>

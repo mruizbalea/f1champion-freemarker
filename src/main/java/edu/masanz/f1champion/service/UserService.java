@@ -19,7 +19,7 @@ public class UserService {
             return UsersDao.obtenerUsuario(idUsuario);
         }
 
-        public User crearUsuario(User usuario) {
+        public User guardarUsuario(User usuario) {
             return UsersDao.guardarUsuario(usuario);
         }
 

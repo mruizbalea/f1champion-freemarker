@@ -31,33 +31,16 @@
 
     <h1>Equipos</h1>
 
-   <div class="container">
-        <a href="Equipo.ftl"><img src="img\Coches\coche1.png"/><p>Nombre equipo</p></a>
-   
-        <a href="Equipo.ftl"><img src="img\Coches\coche2.png"/><p>Nombre equipo</p></a>
-  
-        <a href="Equipo.ftl"><img src="img\Coches\coche3.png"/><p>Nombre equipo</p></a>
-
-        <a href="Equipo.ftl"><img src="img\Coches\coche4.png"/><p>Nombre equipo</p></a>
- 
-        <a href="Equipo.ftl"><img src="img\Coches\coche5.png"/><p>Nombre equipo</p></a>
-   
-        <a href="Equipo.ftl"><img src="img\Coches\coche1.png"/><p>Nombre equipo</p></a>
-   
-        <a href="Equipo.ftl"><img src="img\Coches\coche2.png"/><p>Nombre equipo</p></a>
-  
-        <a href="Equipo.ftl"><img src="img\Coches\coche3.png"/><p>Nombre equipo</p></a>
-
-        <a href="Equipo.ftl"><img src="img\Coches\coche4.png"/><p>Nombre equipo</p></a>
- 
-        <a href="Equipo.ftl"><img src="img\Coches\coche5.png"/><p>Nombre equipo</p></a>
+    <div class="container">
+        <#list listaEquipos as equipo>
+            <a href="/equipo?id=${equipo.id}">
+                <img src="img/coches/${equipo.imagen}" alt="${equipo.nombre}" />
+                <p>${equipo.nombre}</p>
+            </a>
+        </#list>
     </div>
 
-    <div>
-        <a href="Inicio.html" class="boton">Volver al Inicio</a>
-    </div>
-
-
+    <#include "volverinicio.ftl">
 
 </body>
 </html>

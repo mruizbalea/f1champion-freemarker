@@ -47,42 +47,32 @@
     <h1>Pilotos</h1>
 
     <div>
-        <label for="selector"><b>Elige año: </b></label>
-        <div class="select">
-            <select id="selector">
 
-                <option value="Opcion1">2025</option>
-                <option value="Opcion2">2024</option>
-                <option value="Opcion3">2023</option>
-                <option value="Opcion4">2022</option>
-                <option value="Opcion5">2021</option>
-                    
-            </select>
+
+
+        <div class="pilotos">
+
+            <#if pilotos?? && pilotos?size gt 0>
+                <#list pilotos as piloto>
+                    <div class="piloto-card">
+                        <a href="/piloto/${piloto.id}">
+                            <img src="${piloto.imagen!'/img/Iconos/piloto.png'}" alt="${piloto.nombre}">
+                            <p>${piloto.nombre}</p>
+                        </a>
+
+                        <a href="/piloto/editar/${piloto.id}">Editar</a>
+                        <a href="/piloto/delete/${piloto.id}">Eliminar</a>
+                    </div>
+                </#list>
+            <#else>
+                <p>No hay pilotos registrados.</p>
+            </#if>
+
         </div>
 
-        <div>
+        <a href="/piloto" class="boton">Crear nuevo piloto</a>
 
-            <div class="pilotos">
-                <a href="Piloto.ftl"><img src="img\Pilotos-pilotos\Captura de pantalla 2026-01-16 083346.png"/><p>Nombre Pilotos</p></a></li>
-                <a href="Piloto.ftl"><img src="img\Pilotos-pilotos\Captura de pantalla 2026-01-16 083514.png"/><p>Nombre Pilotos</p></a></li>
-                <a href="Piloto.ftl"><img src="img\Pilotos-pilotos\Captura de pantalla 2026-01-16 083633.png"/><p>Nombre Pilotos</p></a></li>
-            </div>
-            <div class="pilotos">
-                <a href="Piloto.ftl"><img src="img\Pilotos-pilotos\Captura de pantalla 2026-01-16 083917 - copia.png"/><p>Nombre Pilotos</p></a></li>
-                <a href="Piloto.ftl"><img src="img\Pilotos-pilotos\Captura de pantalla 2026-01-16 083957.png"/><p>Nombre Pilotos</p></a></li>
-                <a href="Piloto.ftl"><img src="img\Pilotos-pilotos\Captura de pantalla 2026-01-16 084004.png"/><p>Nombre Pilotos</p></a></li>
-            </div>
-            <div class="pilotos">
-                <a href="Piloto.ftl"><img src="img\Pilotos-pilotos\Captura de pantalla 2026-01-16 084018.png"/><p>Nombre Pilotos</p></a></li>
-                <a href="Piloto.ftl"><img src="img\Pilotos-pilotos\Captura de pantalla 2026-01-16 084023.png"/><p>Nombre Pilotos</p></a></li>
-                <a href="Piloto.ftl"><img src="img\Pilotos-pilotos\Captura de pantalla 2026-01-16 084037.png"/><p>Nombre Pilotos</p></a></li>
-            </div>
-            
-        </div>
-
-        <div>
-            <a href="Inicio.ftl" class="boton">Volver al Inicio</a>
-        </div>
+        <#include "volverinicio.ftl">
     </div>
     
 

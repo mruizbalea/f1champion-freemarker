@@ -1,15 +1,19 @@
 USE f1_db;
 
+DROP TABLE IF EXISTS pilotos;
+CREATE TABLE pilotos (
+    id int NOT NULL AUTO_INCREMENT,
+    nombre varchar(255) NOT NULL,
+    edad int NOT NULL,
+    id_equipo int NOT NULL,
+    imagen  varchar(255) NOT NULL,
+    PRIMARY KEY (id)
+);
 
-DROP TABLE IF EXISTS usuarios;
-
-
-CREATE TABLE usuarios (
-    id bigint(20) NOT NULL AUTO_INCREMENT,
-    username varchar(255) NOT NULL,
-    password varchar(255) NOT NULL,
-    rol int(1) DEFAULT 0,
-    creado datetime DEFAULT NULL,
-    modificado datetime DEFAULT NULL,
+DROP TABLE IF EXISTS equipos;
+CREATE TABLE equipos (
+    id int NOT NULL AUTO_INCREMENT,
+    nombre varchar(255) NOT NULL,
+    imagen  varchar(255) NOT NULL,
     PRIMARY KEY (id)
 );

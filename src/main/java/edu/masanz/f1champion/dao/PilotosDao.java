@@ -1,0 +1,86 @@
+package edu.masanz.f1champion.dao;
+
+import edu.masanz.f1champion.database.ConnectionManager;
+import edu.masanz.f1champion.model.Piloto;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PilotosDao {
+
+    public static Piloto obtenerPiloto(int idPiloto) {
+        String sql = "SELECT id, nombre, edad, id_equipo, imagen FROM pilotos WHERE id = ?";
+        Object[] params = {idPiloto};
+        Object[][] resultado = ConnectionManager.ejecutarSelectSQL(sql, params);
+
+        if (resultado != null && resultado.length == 1) {
+            Piloto piloto = new Piloto();
+
+            piloto.setId((Integer) resultado[0][0]);
+            piloto.setNombre((String) resultado[0][1]);
+            piloto.setEdad((Integer) resultado[0][2]);
+            piloto.setId_equipo((Integer) resultado[0][3]);
+            piloto.setImagen((String) resultado[0][4]);
+
+            return piloto;
+        }
+        return null;
+    }
+
+    public static List<Piloto> obtenerPilotos() {
+        List<Piloto> pilotos = new ArrayList<>();
+
+        String sql = "SELECT id, nombre, edad, id_equipo, imagen FROM pilotos ORDER BY id DESC";
+        Object[] params = {};
+
+        Object[][] resultado = ConnectionManager.ejecutarSelectSQL(sql, params);
+
+        if (resultado != null && resultado.length > 0) {
+            for (int i = 0; i < resultado.length; i++) {
+                Piloto piloto = new Piloto();
+
+                piloto.setId((Integer) resultado[i][0]);
+                piloto.setNombre((String) resultado[i][1]);
+                piloto.setEdad((Integer) resultado[i][2]);
+                piloto.setId_equipo((Integer) resultado[i][3]);
+                piloto.setImagen((String) resultado[i][4]);
+
+                pilotos.add(piloto);
+            }
+        }
+        return pilotos;
+    }
+
+    public static void crearPiloto(String nombre, int edad, int idEquipo, String imagen) {
+        String sql = "INSERT INTO pilotos (nombre, edad, id_equipo, imagen) VALUES (?, ?, ?, ?)";
+        Object[] params = {nombre, edad, idEquipo, imagen};
+
+        long id = ConnectionManager.ejecutarInsertSQL(sql, params);
+
+        if (id > 0) {
+            System.out.println("Piloto insertado correctamente");
+        } else {
+            System.out.println("Error en el insert de piloto");
+        }
+    }
+
+    public static void actualizarPiloto(Piloto piloto) {
+        String sql = "UPDATE pilotos SET nombre = ?, edad = ?, id_equipo = ?, imagen = ? WHERE id = ?";
+        Object[] params = {
+                piloto.getNombre(),
+                piloto.getEdad(),
+                piloto.getId_equipo(),
+                piloto.getImagen(),
+                piloto.getId()
+        };
+
+        ConnectionManager.ejecutarUpdateSQL(sql, params);
+    }
+
+    public static void eliminarPiloto(int id) {
+        String sql = "DELETE FROM pilotos WHERE id = ?";
+        Object[] params = {id};
+
+        ConnectionManager.ejecutarUpdateSQL(sql, params);
+    }
+}

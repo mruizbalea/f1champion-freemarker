@@ -46,21 +46,20 @@
     <#include "menu.ftl">
 
     <div>
-        <img src="img\Piloto-piloto\maxVers.png" width="300vh">
+        <img src="${piloto.imagen!'/img/Iconos/piloto.png'}" alt="${piloto.nombre}" width="300vh">
     </div>
     
-    <p class="nombre"><b>Max Verstappen</b></p>
-    <p class="equipo">Red Bull Racing</p>
+    <p class="nombre"><b>${piloto.nombre}</b></p>
+    <p class="equipo">Red Bull Racing (variable de equipo)</p>
 
-    <p><b>Informacion Adicional</b></p>
+    <p><b>Información Adicional</b></p>
 
     <div>
         
         <ul>
-            <li><img src="img\Iconos\piloto.png" width="20vh"><strong> Nombre completo:</strong> Max Emilian Verstappen</li>
-            <li><img src="img\Iconos\campana.png" width="20vh"><strong> Nacimiento:</strong> 30 de septiembre de 1997</li>
-            <li><img src="img\Iconos\trofeo.png" width="20vh"><strong> Numero de Campeonato Mundial:</strong> 2021, 2022, 2023, 2024</li>
-            <li><img src="img\Iconos\ubi2.png" width="20vh"><strong> Nacionalidad:</strong> Holanda</li>
+            <li><img src="img\Iconos\piloto.png" width="20vh"><strong> Nombre: </strong>${piloto.nombre}</li>
+            <li><img src="img\Iconos\campana.png" width="20vh"><strong> Edad: </strong>${piloto.edad}</li>
+            <li><img src="img\Iconos\trofeo.png" width="20vh"><strong> Equipo: </strong>variable de equipo</li>
         </ul>
 
         
@@ -78,19 +77,9 @@
          </div>
         
     </div>
-    
-
-    
-
-    <div>
-        <a href="Inicio.ftl" class="boton">Volver al Inicio</a>
-    </div>
 
 
-
-
-
-
+    <#include "volverinicio.ftl">
 
 </body>
 </html>
