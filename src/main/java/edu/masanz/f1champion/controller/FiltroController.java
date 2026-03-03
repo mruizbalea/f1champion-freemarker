@@ -5,12 +5,14 @@ import org.jetbrains.annotations.NotNull;
 
 public class FiltroController {
     public static void filtroBefore(@NotNull Context context) {
-        if (!context.path().equals("/login") && !UsersController.AUTENCTICADO){
+        if (!context.path().equals("/login") && !UsersController.AUTENTICADO){
             context.redirect("/login");
         }
     }
     public static void filtroAfter(@NotNull Context context) {
-        System.out.println("Entrando en el after");
 
+
+        System.out.println(context.path());
+        System.out.println("Entrando en el after");
     }
 }

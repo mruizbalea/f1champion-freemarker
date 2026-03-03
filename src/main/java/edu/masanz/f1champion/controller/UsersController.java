@@ -16,7 +16,7 @@ import static edu.masanz.f1champion.dao.UsersDao.usuario;
 
 public class UsersController {
 
-    public static boolean AUTENCTICADO = false;
+    public static boolean AUTENTICADO = false;
     // private static NotaService notaService = new NotaService();
 
     public static void accederLogin(@NotNull Context context) {
@@ -24,16 +24,37 @@ public class UsersController {
         context.render("/templates/login.ftl");
     }
 
+    public static void accederGrandPrix(@NotNull Context context) {
+
+        context.render("/templates/grandprix.ftl");
+    }
+
+    public static void accederEquipos(@NotNull Context context) {
+
+        context.render("/templates/equipos.ftl");
+    }
+
+    public static void accederClasificacion(@NotNull Context context) {
+
+        context.render("/templates/clasificacion.ftl");
+    }
+
+    public static void accederInicio(@NotNull Context context) {
+
+        context.render("/templates/inicio.ftl");
+    }
+
+
     public static void login(@NotNull Context context) {
 
         String username = context.formParam("username");
         String password = context.formParam("password");
 
         if (username.equals("admin") && password.equals("admin")) {
-            AUTENCTICADO = true;
-            context.redirect("/templates/inicio");
+            AUTENTICADO = true;
+            context.redirect("/inicio");
         } else {
-            context.redirect("/templates/login");
+            context.redirect("/login");
         }
 
     }
@@ -99,9 +120,5 @@ public class UsersController {
         context.redirect("/lista-items");
     }
 
-    public static void irAInicio(Context context){
 
-
-        context.render("/inicio");
-    }
 }

@@ -21,7 +21,7 @@
 
         form {
             width: 100%;
-            color: #000;
+
         }
 
         .cuerpo {
@@ -53,11 +53,11 @@
         }
 
         .inicio_sesion {
+            margin-top: 3vh;
             height: 6vh;
             border-radius: 3vh;
             background-color: red;
             width: 100%;
-            opacity: 0.9;
             border: none;
         }
 
@@ -78,13 +78,6 @@
             border-radius: 1vh;
         }
 
-        .inicio_sesion:hover {
-            opacity: 1;
-        }
-
-        .sesion_div {
-            width: 100%;
-        }
 
         .texto {
             text-align: center;
@@ -93,7 +86,7 @@
 
         .form {
             width: 100%;
-            opacity: 0.5;
+            opacity: 0.8;
         }
 
         span {
@@ -118,7 +111,7 @@
     </div>
 
     <div class="cuerpo">
-        <img src="img\Iconos\logooo.png" alt="logo_f1" width="300" height="300">
+        <img src="/img/Iconos/logooo.png" alt="logo_f1" width="300" height="300">
 
         <div class="form">
              <form method="post" action="/login">
@@ -126,14 +119,11 @@
                  <input name="username" type="text" placeholder="tu.correo@ejemplo.com"><br><br>
                  <label for="Contraseña" class="labels">Contraseña</label><br>
                  <input name="password" type="password" placeholder="********"><br>
+                 <input type="submit" value="Iniciar sesión" class="inicio_sesion">
              </form>
         </div>
 
-        <div class="sesion_div">
-            <form action="/irAInicio">
-                <input type="submit" value="Iniciar sesión" class="inicio_sesion">
-            </form>
-        </div>
+
         
         
         <div class="texto">
@@ -149,7 +139,7 @@
             </div>
         </div>
         
-        <span>¿Has olvidado tu contraseña? <a href="Login.html"><u>Contáctanos.</u></a></span>
+        <span>¿Has olvidado tu contraseña? <a href="/login"><u>Contáctanos.</u></a></span>
     </div>
     
     <div class="pie">

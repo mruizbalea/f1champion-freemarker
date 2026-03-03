@@ -29,48 +29,27 @@ public class Main {
             config.fileRenderer(new JavalinFreemarker());
         }).start(8080);
 
-        app.before("/*", FiltroController::filtroBefore);
-        app.before("/usuarios*", FiltroController::filtroBefore);
-        app.before("/edita-nota*", FiltroController::filtroBefore);
-        app.before("/elimina-nota*", FiltroController::filtroBefore);
+        //app.before("/*", FiltroController::filtroBefore);
+
 
         app.get("/login", UsersController::accederLogin);
         app.post("/login", UsersController::login);
+        app.get("/inicio", UsersController::accederInicio);
+        app.get("/grand-prix", UsersController::accederGrandPrix);
+        app.get("/equipos", UsersController::accederEquipos);
+        app.get("/clasificacion", UsersController::accederClasificacion);
 
 
         // PRINCIPAL
-        app.get("/", Main::login);
-        app.get("/login/error", Main::error);
-        app.get("/inicio", Main::correcto);
+        app.get("/", UsersController::accederLogin);
         // app.get("/lista-usuarios", UsersController::listarUsuario);
         app.get("/edita-usuario/{id}", UsersController::servirUsuario);
         app.post("/edita-usuario/{id}", UsersController::editarUsuario);
-        app.get("/crea-usuario", UsersController::servirUsuario);
+        // app.get("/crea-usuario", UsersController::crearUsuario);
         // app.post("/crea-usuario", UsersController::crearUsuario);
         app.get("/elimina-usuario/{id}", UsersController::eliminarUsuario);
-        app.get("/irAInicio", UsersController::irAInicio);
 
         app.after("*", FiltroController::filtroAfter);
 
-
     }
-
-    private static void correcto(@NotNull Context context) {
-        Map<String, Object> model = new HashMap<>();
-
-        context.render("/templates/inicio.ftl");
-    }
-
-    private static void error(@NotNull Context context) {
-        Map<String, Object> model = new HashMap<>();
-
-        context.render("/templates/errorlogin.ftl");
-    }
-
-    private static void login(@NotNull Context context) {
-        Map<String, Object> model = new HashMap<>();
-
-        context.render("/templates/login.ftl");
-    }
-
 }
