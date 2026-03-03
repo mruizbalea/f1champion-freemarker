@@ -22,13 +22,13 @@ public class UsersDao {
         Object[][] result = ConnectionManager.ejecutarSelectSQL(select, params);
         if (result!=null){
 
-            User user = new User((Long)result[0][0], (String)result[0][1], (String)result[0][2], (int)result[0][3]);
+            User user = new User((long)result[0][0], (String)result[0][1], (String)result[0][2], (int)result[0][3]);
             return user;
         }
         return null;
     }
 
-    public int obtenerNumeroUsuarios() {
+    public static int obtenerNumeroUsuarios() {
         String sql = "SELECT COUNT(*) FROM usuarios";
         Object[] params = {};
         Object[][] resultado = ConnectionManager.ejecutarSelectSQL(sql, params);
@@ -102,5 +102,23 @@ public class UsersDao {
         Object[] params = {id};
         ConnectionManager.ejecutarUpdateSQL(sql, params);
         return true;
+    }
+
+
+    public static void crearUsuario(long contador, String nombreUsuario, String contrasenaUsuario, int rolUsuario) {
+        User user = new User(contador, nombreUsuario, contrasenaUsuario, rolUsuario);
+        usuario.put((int) contador, user);
+        contador++;
+    }
+
+
+    public static User guardarUsuario(User usuario) {
+
+        return usuario;
+    }
+
+    public static User validarCredenciales(String nombreUsuario, String password) {
+
+        return validarCredenciales(nombreUsuario, password);
     }
 }
