@@ -52,7 +52,7 @@
     <p class="nombre"><b>${piloto.nombre}</b></p>
     <p class="equipo">Red Bull Racing (variable de equipo)</p>
 
-    <p><b>Informacion Adicional</b></p>
+    <p><b>Información Adicional</b></p>
 
     <div>
         
