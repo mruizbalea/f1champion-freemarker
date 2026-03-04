@@ -5,39 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b3513a4-6c54-4a96-bbc3-9fa61fdb53b2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/controller/PilotosController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/dao/PilotosDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/editar-piloto.ftl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/volverinicio.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/console.log" beforeDir="false" afterPath="$PROJECT_DIR$/console.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sql/create-db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/create-db.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sql/create-tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/create-tables.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/sql/inserts.sql" beforeDir="false" afterPath="$PROJECT_DIR$/doc/sql/inserts.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/controller/FiltroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/controller/FiltroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/controller/PilotosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/controller/PilotosController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/dao/UsersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/dao/UsersDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/model/Piloto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/model/Piloto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/clasificacion.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/clasificacion.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/equipo.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/equipo.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/equipos.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/equipos.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/gpaustralia.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/gpaustralia.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/grandprix.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/grandprix.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editar-piloto.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editar-piloto.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/piloto.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/piloto.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pilotos.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pilotos.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/controller/FiltroController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/controller/FiltroController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/controller/PilotosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/controller/PilotosController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/dao/UsersDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/dao/UsersDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/model/Piloto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/model/Piloto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/clasificacion.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/clasificacion.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/equipo.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/equipo.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/equipos.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/equipos.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/gpaustralia.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/gpaustralia.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/grandprix.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/grandprix.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/editar-piloto.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editar-piloto.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/piloto.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/piloto.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/pilotos.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/pilotos.ftl" afterDir="false" />
     </list>
@@ -73,7 +52,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mateo/Documents/Tareas/Lenguaje de marcas/Proyecto/f1champion-freemarker"
+    "last_opened_file_path": "C:/Users/mruizbalea/Clase/Lenguajes de marcas/proyecto5/f1champion-freemarker"
   }
 }]]></component>
   <component name="RunManager">

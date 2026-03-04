@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piloto</title>
+    <title>${piloto.nombre}</title>
     <link rel="stylesheet" type="text/css" href="/css/Styles.css"/>
     <style>
 
@@ -50,16 +50,16 @@
     </div>
     
     <p class="nombre"><b>${piloto.nombre}</b></p>
-    <p class="equipo">Red Bull Racing (variable de equipo)</p>
+    <p class="equipo">${piloto.id_equipo}</p>
 
-    <p><b>Informacion Adicional</b></p>
+    <p><b>Información Adicional</b></p>
 
     <div>
         
         <ul>
             <li><img src="img\Iconos\piloto.png" width="20vh"><strong> Nombre: </strong>${piloto.nombre}</li>
             <li><img src="img\Iconos\campana.png" width="20vh"><strong> Edad: </strong>${piloto.edad}</li>
-            <li><img src="img\Iconos\trofeo.png" width="20vh"><strong> Equipo: </strong>variable de equipo</li>
+            <li><img src="img\Iconos\trofeo.png" width="20vh"><strong> Equipo ID: </strong>${piloto.id_equipo}</li>
         </ul>
 
         

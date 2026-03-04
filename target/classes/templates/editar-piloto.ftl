@@ -46,18 +46,21 @@
 
 <div>
 
-        <h1>${piloto?? ? "Editar Piloto" : "Nuevo Piloto"}</h1>
 
-        <form method="post" action="${piloto?? ? '/piloto/' + piloto.id : '/piloto'}">
+
+        <h1>${piloto???'Editar Piloto':'Nuevo Piloto'}</h1>
+
+        <form method="post" action="/piloto">
+
 
             <label>Nombre:</label>
-            <input type="text" name="nombre" value="${piloto.nombre!}">
+            <input type="text" name="nombre" value="${piloto.nombre!} required">
 
             <label>Edad:</label>
-            <input type="number" name="edad" value="${piloto.edad!}">
+            <input type="number" name="edad" value="${piloto.edad!} required">
 
             <label>ID Equipo:</label>
-            <input type="number" name="id_equipo" value="${piloto.id_equipo!}">
+            <input type="number" name="id_equipo" value="${piloto.id_equipo!} required">
 
             <button type="submit">Guardar</button>
 

@@ -24,7 +24,7 @@ public class Main {
 
         logger.info("ARRANCANDO APLICACION");
 
-        ConnectionManager.conectar("nombredelabase", "root", "roo7");
+        ConnectionManager.conectar("f1_db", "root", "roo7");
 
         Javalin app = Javalin.create(config -> {
             config.staticFiles.add("public");
@@ -47,9 +47,12 @@ public class Main {
         // PILOTOS
         app.get("/lista-pilotos", PilotosController::listarPilotos);
         app.get("/piloto/{id}", PilotosController::servirPiloto);
-        app.post("/piloto", PilotosController::crearPiloto);
+        app.get("/piloto", PilotosController::formularioPiloto);
+        app.post("/crear-piloto", PilotosController::crearPiloto);
+        app.get("/crear-piloto", PilotosController::formularioCrearPiloto);
         app.post("/piloto/{id}", PilotosController::editarPiloto);
-        app.get("/piloto/delete/{id}", PilotosController::eliminarPiloto);
+        app.get("/piloto/editar/{id}", PilotosController::editarPiloto);
+        app.get("/piloto/eliminar/{id}", PilotosController::eliminarPiloto);
 
 
         // app.get("/lista-usuarios", UsersController::listarUsuario);

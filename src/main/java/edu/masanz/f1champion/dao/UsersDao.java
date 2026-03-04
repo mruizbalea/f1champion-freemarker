@@ -13,7 +13,7 @@ public class UsersDao {
     public static int contador;
 
     public UsersDao() {
-        ConnectionManager.conectar("f1", "root", "roo7");
+        ConnectionManager.conectar("f1_db", "root", "roo7");
     }
 
     public static User login(String username, String password){

@@ -48,13 +48,11 @@
 
     <div>
 
-
-
         <div class="pilotos">
 
             <#if pilotos?? && pilotos?size gt 0>
                 <#list pilotos as piloto>
-                    <div class="piloto-card">
+                    <div class="pilotos">
                         <a href="/piloto/${piloto.id}">
                             <img src="${piloto.imagen!'/img/Iconos/piloto.png'}" alt="${piloto.nombre}">
                             <p>${piloto.nombre}</p>
@@ -70,7 +68,7 @@
 
         </div>
 
-        <a href="/piloto" class="boton">Crear nuevo piloto</a>
+        <a href="/crear-piloto" class="boton">Crear nuevo piloto</a>
 
         <#include "volverinicio.ftl">
     </div>

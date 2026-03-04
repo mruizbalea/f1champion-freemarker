@@ -4,6 +4,7 @@ import edu.masanz.f1champion.dao.PilotosDao;
 import edu.masanz.f1champion.model.Piloto;
 import io.javalin.http.Context;
 import io.javalin.http.UploadedFile;
+import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 import java.util.*;
@@ -33,13 +34,28 @@ public class PilotosController {
 
     public static void crearPiloto(Context context) {
 
-        String nombre = context.formParam("nombre");
-        int edad = Integer.parseInt(context.formParam("edad"));
-        int idEquipo = Integer.parseInt(context.formParam("id_equipo"));
+        String nombre = "";
+        int edad = 0;
+        int idEquipo = 0;
+
+        nombre = context.formParam("nombre");
+        if (nombre == null || nombre.isEmpty()){
+            System.out.println("nombre = " + nombre);
+            context.redirect("/inicio");
+        }
+        try {
+            edad = Integer.parseInt(context.formParam("edad"));
+            idEquipo = Integer.parseInt(context.formParam("id_equipo"));
+        } catch (Exception e) {
+            System.out.println("edad = " + edad);
+            System.out.println("id_equipo = " + idEquipo);
+            context.redirect("/inicio");
+        }
+
 
         PilotosDao.crearPiloto(nombre, edad, idEquipo, "");
 
-        context.redirect("/templates/lista-pilotos");
+        context.render("/templates/editar-piloto.ftl");
     }
 
     public static void editarPiloto(Context context) {
@@ -57,7 +73,7 @@ public class PilotosController {
 
         PilotosDao.actualizarPiloto(piloto);
 
-        context.redirect("/templates/lista-pilotos");
+        context.redirect("/lista-pilotos");
     }
 
     public static void eliminarPiloto(Context context) {
@@ -65,6 +81,18 @@ public class PilotosController {
 
         PilotosDao.eliminarPiloto(id);
 
-        context.redirect("/templates/lista-pilotos");
+        context.redirect("/lista-pilotos");
+    }
+
+    public static void formularioPiloto(@NotNull Context context) {
+
+        context.render("/templates/piloto.ftl");
+
+    }
+
+    public static void formularioCrearPiloto(@NotNull Context context) {
+
+        context.render("/templates/editar-piloto.ftl");
+
     }
 }
