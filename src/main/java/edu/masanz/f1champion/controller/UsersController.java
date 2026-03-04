@@ -45,6 +45,11 @@ public class UsersController {
         context.render("/templates/inicio.ftl");
     }
 
+    public static void accederPilotos(@NotNull Context context) {
+
+        context.render("/templates/pilotos.ftl");
+    }
+
 
     public static void login(@NotNull Context context) {
 
@@ -120,6 +125,5 @@ public class UsersController {
         UsersDao.eliminarUsuario(id);
         context.redirect("/lista-items");
     }
-
 
 }
