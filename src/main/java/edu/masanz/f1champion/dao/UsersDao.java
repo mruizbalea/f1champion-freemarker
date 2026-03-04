@@ -80,7 +80,7 @@ public class UsersDao {
         return null;
     }
 
-    public static User guardarUser(User user) {
+    public static User guardarUsuario(User user) {
         String sql = "INSERT INTO usuarios (username, password, rol) VALUES (?, ?, ?)";
         Object[] params = {user.getUsername(), user.getPassword(), user.getRol()};
         long id = ConnectionManager.ejecutarInsertSQL(sql, params);
@@ -111,11 +111,6 @@ public class UsersDao {
         contador++;
     }
 
-
-    public static User guardarUsuario(User usuario) {
-
-        return usuario;
-    }
 
     public static User validarCredenciales(String nombreUsuario, String password) {
 

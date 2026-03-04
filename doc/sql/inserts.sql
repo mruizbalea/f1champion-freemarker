@@ -1,22 +1,16 @@
+USE f1_db;
 
+INSERT INTO pilotos (id, nombre, edad, id_equipo, imagen)
+VALUES (1, 'Alonso', 22, 1, "");
 
-USE f1champion;
+INSERT INTO pilotos (id, nombre, edad, id_equipo, imagen)
+VALUES (2, 'Hamilton', 23, 2, "");
 
+INSERT INTO pilotos (id, nombre, edad, id_equipo, imagen)
+VALUES (3, 'Verstappen', 42, 6, "");
 
-INSERT INTO usuarios (id, username, password, rol)
-VALUES (1, 'Alonso', 'magic14', 0);
+INSERT INTO pilotos (id, nombre, edad, id_equipo, imagen)
+VALUES (4, 'Leclerc', 34, 4, "");
 
-
-INSERT INTO usuarios (id, username, password, rol)
-VALUES (2, 'Hamilton', 'sir44', 0);
-
-
-INSERT INTO usuarios (id, username, password, rol)
-VALUES (3, 'Verstappen', 'max33', 0);
-
-INSERT INTO usuarios (id, username, password, rol)
-VALUES (4, 'Leclerc', 'charles16', 0);
-
-
-INSERT INTO usuarios (id, username, password, rol)
-VALUES (5, 'Adrian_Admin', 'admin123', 1);
+INSERT INTO pilotos (id, nombre, edad, id_equipo, imagen)
+VALUES (5, 'Bottas', 36, 3, "");

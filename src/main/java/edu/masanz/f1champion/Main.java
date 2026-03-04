@@ -1,7 +1,9 @@
 package edu.masanz.f1champion;
 
+import edu.masanz.f1champion.controller.PilotosController;
 import edu.masanz.f1champion.controller.UsersController;
 import edu.masanz.f1champion.controller.FiltroController;
+import edu.masanz.f1champion.dao.PilotosDao;
 import edu.masanz.f1champion.database.ConnectionManager;
 import io.javalin.Javalin;
 import io.javalin.http.Context;
@@ -29,9 +31,10 @@ public class Main {
             config.fileRenderer(new JavalinFreemarker());
         }).start(8080);
 
-        //app.before("/*", FiltroController::filtroBefore);
+        // app.before("/*", FiltroController::filtroBefore);
 
-
+        // PRINCIPAL
+        app.get("/", UsersController::accederLogin);
         app.get("/login", UsersController::accederLogin);
         app.post("/login", UsersController::login);
         app.get("/inicio", UsersController::accederInicio);
@@ -41,14 +44,20 @@ public class Main {
         app.get("/pilotos", UsersController::accederPilotos);
 
 
-        // PRINCIPAL
-        app.get("/", UsersController::accederLogin);
+        // PILOTOS
+        app.get("/lista-pilotos", PilotosController::listarPilotos);
+        app.get("/piloto/{id}", PilotosController::servirPiloto);
+        app.post("/piloto", PilotosController::crearPiloto);
+        app.post("/piloto/{id}", PilotosController::editarPiloto);
+        app.get("/piloto/delete/{id}", PilotosController::eliminarPiloto);
+
+
         // app.get("/lista-usuarios", UsersController::listarUsuario);
-        app.get("/edita-usuario/{id}", UsersController::servirUsuario);
-        app.post("/edita-usuario/{id}", UsersController::editarUsuario);
+        // app.get("/edita-usuario/{id}", UsersController::servirUsuario);
+        // app.post("/edita-usuario/{id}", UsersController::editarUsuario);
         // app.get("/crea-usuario", UsersController::crearUsuario);
         // app.post("/crea-usuario", UsersController::crearUsuario);
-        app.get("/elimina-usuario/{id}", UsersController::eliminarUsuario);
+        // app.get("/elimina-usuario/{id}", UsersController::eliminarUsuario);
 
         app.after("*", FiltroController::filtroAfter);
 
