@@ -18,7 +18,7 @@ public class PilotosController {
 
         model.put("pilotos", pilotos);
 
-        context.render("/clasificacion.ftl", model);
+        context.render("/templates/pilotos.ftl", model);
     }
 
     public static void servirPiloto(Context context) {
@@ -29,7 +29,7 @@ public class PilotosController {
 
         model.put("piloto", piloto);
 
-        context.render("/piloto.ftl", model);
+        context.render("/templates/piloto.ftl", model);
     }
 
     public static void crearPiloto(Context context) {
@@ -55,11 +55,7 @@ public class PilotosController {
 
         PilotosDao.crearPiloto(nombre, edad, idEquipo, "");
 
-<<<<<<< HEAD
         context.render("/templates/editar-piloto.ftl");
-=======
-        context.redirect("/clasificacion");
->>>>>>> 02fe589b87303be97b71da62b83f69732ddef392
     }
 
     public static void editarPiloto(Context context) {
