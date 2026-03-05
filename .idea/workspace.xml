@@ -4,49 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4b3513a4-6c54-4a96-bbc3-9fa61fdb53b2" name="Changes" comment="">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/console.log" beforeDir="false" afterPath="$PROJECT_DIR$/console.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/controller/PilotosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/controller/PilotosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/dao/UsersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/dao/UsersDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editar-piloto.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editar-piloto.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/piloto.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/piloto.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/pilotos.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/pilotos.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/controller/PilotosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/controller/PilotosController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/dao/UsersDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/dao/UsersDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/editar-piloto.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/editar-piloto.ftl" afterDir="false" />
-=======
+    <list default="true" id="b99fc103-ea56-486c-8085-9cda22f55149" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_03_2026_11_47_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_03_03_2026_11_47__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/console.log" beforeDir="false" afterPath="$PROJECT_DIR$/console.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/controller/PilotosController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/masanz/f1champion/controller/PilotosController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/clasificacion.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/clasificacion.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/controller/PilotosController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/masanz/f1champion/controller/PilotosController.class" afterDir="false" />
->>>>>>> 02fe589b87303be97b71da62b83f69732ddef392
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/piloto.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/piloto.ftl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
-}</component>
-  <component name="ProjectId" id="3AQpxGpspDnD4wAS3D8DSRf5GjN" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="3AW63v9cmQm6XIrFP72K8kjkjbw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -56,15 +32,10 @@
     "Application.Main.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-<<<<<<< HEAD
-    "last_opened_file_path": "C:/Users/mruizbalea/Clase/Lenguajes de marcas/proyecto5/f1champion-freemarker"
-=======
-    "last_opened_file_path": "C:/Users/mdasilvcos1/Downloads/F1parte1/f1champion-freemarker"
->>>>>>> 02fe589b87303be97b71da62b83f69732ddef392
+    "last_opened_file_path": "C:/Users/mruizbalea/Clase/Lenguajes de marcas/Proyecto6/f1champion-freemarker"
   }
 }]]></component>
   <component name="RunManager">
@@ -89,15 +60,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4b3513a4-6c54-4a96-bbc3-9fa61fdb53b2" name="Changes" comment="" />
-      <created>1772534895198</created>
+      <changelist id="b99fc103-ea56-486c-8085-9cda22f55149" name="Changes" comment="" />
+      <created>1772695785821</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1772534895198</updated>
+      <updated>1772695785821</updated>
     </task>
     <servers />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="com.intellij.fileTypeFactory" implementationName="*.ftl" />
   </component>
 </project>
