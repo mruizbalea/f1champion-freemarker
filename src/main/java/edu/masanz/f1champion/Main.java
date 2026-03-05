@@ -47,11 +47,10 @@ public class Main {
         // PILOTOS
         app.get("/lista-pilotos", PilotosController::listarPilotos);
         app.get("/piloto/{id}", PilotosController::servirPiloto);
-        app.get("/piloto", PilotosController::formularioPiloto);
         app.post("/crear-piloto", PilotosController::crearPiloto);
-        app.get("/crear-piloto", PilotosController::formularioCrearPiloto);
-        app.post("/piloto/{id}", PilotosController::editarPiloto);
-        app.get("/piloto/editar/{id}", PilotosController::editarPiloto);
+        app.get("/crear-piloto", PilotosController::formularioPiloto);
+        app.post("/piloto/editar/{id}", PilotosController::editarPiloto);
+        app.get("/piloto/editar/{id}", PilotosController::formularioPiloto);
         app.get("/piloto/eliminar/{id}", PilotosController::eliminarPiloto);
 
 

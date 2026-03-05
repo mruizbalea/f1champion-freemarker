@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pilotos</title>
+    <title><#if piloto??>Editar Piloto<#else>Crear Piloto</#if></title>
     <link rel="stylesheet" type="text/css" href="/css/Styles.css"/>
     <style>
 
@@ -44,23 +44,40 @@
 
     <#include "menu.ftl">
 
-<div>
+    <div>
 
 
+        <#if piloto??>
+            <h1>Editar Piloto</h1>
+        <#else>
+            <h1>Crear Piloto</h1>
+        </#if>
 
-        <h1>${piloto???'Editar Piloto':'Nuevo Piloto'}</h1>
+        <#assign destino = "/crearPiloto">
+        <#assign nombre = "">
+        <#assign edad = 0>
+        <#assign idEuipo = 0>
+        <#assign imagen = "">
 
-        <form method="post" action="/piloto">
+        <#if item??>
+            <#assign destino = "/piloto/editar/"+piloto.id>
+            <#assign nombre = piloto.nombre>
+            <#assign edad = piloto.edad>
+            <#assign idEuipo = piloto.idEuipo>
+            <#assign imagen = piloto.imagen>
+        </#if>
+
+        <form method="post" action="${destino}">
 
 
             <label>Nombre:</label>
-            <input type="text" name="nombre" value="${piloto.nombre!} required">
+            <input type="text" name="nombre" value="${piloto.nombre} required">
 
             <label>Edad:</label>
-            <input type="number" name="edad" value="${piloto.edad!} required">
+            <input type="number" name="edad" value="${piloto.edad} required">
 
             <label>ID Equipo:</label>
-            <input type="number" name="id_equipo" value="${piloto.id_equipo!} required">
+            <input type="number" name="id_equipo" value="${piloto.idEquipo} required">
 
             <button type="submit">Guardar</button>
 

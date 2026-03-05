@@ -55,7 +55,7 @@ public class PilotosController {
 
         PilotosDao.crearPiloto(nombre, edad, idEquipo, "");
 
-        context.render("/templates/editar-piloto.ftl");
+        context.redirect("/lista-pilotos");
     }
 
     public static void editarPiloto(Context context) {
@@ -86,13 +86,16 @@ public class PilotosController {
 
     public static void formularioPiloto(@NotNull Context context) {
 
-        context.render("/templates/piloto.ftl");
+        Map<String, Object> model = new HashMap<>();
 
-    }
+        Map<String, String> pathParams = context.pathParamMap();
+        if(pathParams.containsKey("id")){
+            int id = Integer.parseInt(context.pathParam("id"));
+            Piloto piloto = PilotosDao.obtenerPiloto(id);
+            model.put("piloto", piloto);
+        }
 
-    public static void formularioCrearPiloto(@NotNull Context context) {
-
-        context.render("/templates/editar-piloto.ftl");
+        context.render("/templates/editar-piloto.ftl", model);
 
     }
 }
