@@ -46,7 +46,7 @@
     <#include "menu.ftl">
 
     <div>
-        <img src="${piloto.imagen!'/img/Iconos/piloto.png'}" alt="${piloto.nombre}" width="300vh">
+        <img src="${piloto.imagen!"/img/Iconos/piloto.png"}" alt="${piloto.nombre}" width="300vh">
     </div>
     
     <p class="nombre"><b>${piloto.nombre}</b></p>
@@ -65,18 +65,9 @@
         
     </div>
 
-    <p><b>Pistas recientes</b></p>
 
-    <div class="pistas">
-        
-        <div class="pista">
-            <img src="img\Circuitos-mini\albert park.png"><p> Australia</p></li>
-        </div>
-         <div class="pista">
-            <img src="img\Circuitos-mini\image (1).png"><p> China</p></li>
-         </div>
-        
-    </div>
+    <a href="/piloto/editar/${piloto.id}" class="boton">Editar</a>
+    <a href="/piloto/eliminar/${piloto.id}" class="boton">Eliminar</a>
 
 
     <#include "volverinicio.ftl">

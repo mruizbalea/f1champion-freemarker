@@ -41,11 +41,10 @@ public class Main {
         app.get("/grand-prix", UsersController::accederGrandPrix);
         app.get("/equipos", UsersController::accederEquipos);
         app.get("/clasificacion", UsersController::accederClasificacion);
-        app.get("/pilotos", UsersController::accederPilotos);
 
 
         // PILOTOS
-        app.get("/lista-pilotos", PilotosController::listarPilotos);
+        app.get("/pilotos", PilotosController::listarPilotos);
         app.get("/piloto/{id}", PilotosController::servirPiloto);
         app.post("/crear-piloto", PilotosController::crearPiloto);
         app.get("/crear-piloto", PilotosController::formularioPiloto);

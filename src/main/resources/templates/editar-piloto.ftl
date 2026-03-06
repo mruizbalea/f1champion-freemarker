@@ -53,17 +53,17 @@
             <h1>Crear Piloto</h1>
         </#if>
 
-        <#assign destino = "/crearPiloto">
+        <#assign destino = "/crear-piloto">
         <#assign nombre = "">
         <#assign edad = 0>
-        <#assign idEuipo = 0>
+        <#assign idEquipo = 0>
         <#assign imagen = "">
 
-        <#if item??>
+        <#if piloto??>
             <#assign destino = "/piloto/editar/"+piloto.id>
             <#assign nombre = piloto.nombre>
             <#assign edad = piloto.edad>
-            <#assign idEquipo = piloto.idEuipo>
+            <#assign idEquipo = piloto.idEquipo>
             <#assign imagen = piloto.imagen>
         </#if>
 

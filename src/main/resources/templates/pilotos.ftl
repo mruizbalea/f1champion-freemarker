@@ -57,9 +57,6 @@
                             <img src="${piloto.imagen!'/img/Iconos/piloto.png'}" alt="${piloto.nombre}">
                             <p>${piloto.nombre}</p>
                         </a>
-
-                        <a href="/piloto/editar/${piloto.id}">Editar</a>
-                        <a href="/piloto/eliminar/${piloto.id}">Eliminar</a>
                     </div>
                 </#list>
             <#else>

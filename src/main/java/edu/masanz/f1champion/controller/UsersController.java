@@ -47,7 +47,10 @@ public class UsersController {
 
     public static void accederPilotos(@NotNull Context context) {
 
-        context.render("/templates/pilotos.ftl");
+        Map<String, Object> model = new HashMap<>();
+
+
+        context.render("/templates/pilotos.ftl", model);
     }
 
 
