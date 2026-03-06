@@ -45,10 +45,10 @@ public class PilotosController {
         }
         try {
             edad = Integer.parseInt(context.formParam("edad"));
-            idEquipo = Integer.parseInt(context.formParam("id_equipo"));
+            idEquipo = Integer.parseInt(context.formParam("idEquipo"));
         } catch (Exception e) {
             System.out.println("edad = " + edad);
-            System.out.println("id_equipo = " + idEquipo);
+            System.out.println("idEquipo = " + idEquipo);
             context.redirect("/inicio");
         }
 

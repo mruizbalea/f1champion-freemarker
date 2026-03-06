@@ -35,6 +35,7 @@
         }
 
         .boton {
+            margin-bottom: 1vh;
             background-color: red;
             border: none;
             color: white;

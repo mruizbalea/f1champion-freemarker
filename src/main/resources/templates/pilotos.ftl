@@ -50,7 +50,7 @@
 
         <div class="pilotos">
 
-            <#if pilotos?? && pilotos?size gt 0>
+            <#if pilotos??>
                 <#list pilotos as piloto>
                     <div class="pilotos">
                         <a href="/piloto/${piloto.id}">
@@ -59,7 +59,7 @@
                         </a>
 
                         <a href="/piloto/editar/${piloto.id}">Editar</a>
-                        <a href="/piloto/delete/${piloto.id}">Eliminar</a>
+                        <a href="/piloto/eliminar/${piloto.id}">Eliminar</a>
                     </div>
                 </#list>
             <#else>

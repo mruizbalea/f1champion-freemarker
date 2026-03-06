@@ -63,7 +63,7 @@
             <#assign destino = "/piloto/editar/"+piloto.id>
             <#assign nombre = piloto.nombre>
             <#assign edad = piloto.edad>
-            <#assign idEuipo = piloto.idEuipo>
+            <#assign idEquipo = piloto.idEuipo>
             <#assign imagen = piloto.imagen>
         </#if>
 
@@ -71,13 +71,13 @@
 
 
             <label>Nombre:</label>
-            <input type="text" name="nombre" value="${piloto.nombre} required">
+            <input type="text" name="nombre" value="${nombre} required">
 
             <label>Edad:</label>
-            <input type="number" name="edad" value="${piloto.edad} required">
+            <input type="number" name="edad" value="${edad} required">
 
             <label>ID Equipo:</label>
-            <input type="number" name="id_equipo" value="${piloto.idEquipo} required">
+            <input type="number" name="idEquipo" value="${idEquipo} required">
 
             <button type="submit">Guardar</button>
 

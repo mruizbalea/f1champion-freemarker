@@ -35,15 +35,15 @@ public class PilotosDao {
 
         Object[][] resultado = ConnectionManager.ejecutarSelectSQL(sql, params);
 
-        if (resultado != null && resultado.length > 0) {
-            for (int i = 0; i < resultado.length; i++) {
+        if (resultado != null) {
+            for (Object[] objects : resultado) {
                 Piloto piloto = new Piloto();
 
-                piloto.setId((Integer) resultado[i][0]);
-                piloto.setNombre((String) resultado[i][1]);
-                piloto.setEdad((Integer) resultado[i][2]);
-                piloto.setId_equipo((Integer) resultado[i][3]);
-                piloto.setImagen((String) resultado[i][4]);
+                piloto.setId((Integer) objects[0]);
+                piloto.setNombre((String) objects[1]);
+                piloto.setEdad((Integer) objects[2]);
+                piloto.setId_equipo((Integer) objects[3]);
+                piloto.setImagen((String) objects[4]);
 
                 pilotos.add(piloto);
             }
