@@ -38,9 +38,6 @@ public class Main {
         app.get("/login", UsersController::accederLogin);
         app.post("/login", UsersController::login);
         app.get("/inicio", UsersController::accederInicio);
-        app.get("/grand-prix", UsersController::accederGrandPrix);
-        app.get("/equipos", UsersController::accederEquipos);
-        app.get("/clasificacion", UsersController::accederClasificacion);
 
 
         // PILOTOS
@@ -51,6 +48,19 @@ public class Main {
         app.post("/piloto/editar/{id}", PilotosController::editarPiloto);
         app.get("/piloto/editar/{id}", PilotosController::formularioPiloto);
         app.get("/piloto/eliminar/{id}", PilotosController::eliminarPiloto);
+
+        // EQUIPOS
+        app.get("/equipos", UsersController::accederEquipos);
+
+
+        // CARRERAS
+        app.get("/grand-prix", UsersController::accederGrandPrix);
+
+
+        // CLASIFICACION
+        app.get("/clasificacion", UsersController::accederClasificacion);
+
+
 
 
         // app.get("/lista-usuarios", UsersController::listarUsuario);

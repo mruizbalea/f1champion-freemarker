@@ -48,28 +48,15 @@
     <h1>Clasificación</h1>
 
     <div>
-        <label for="selector"><b>Elige año: </b></label>
-        <div class="select">
-            <select id="selector">
-
-                <option value="Opcion1">2025</option>
-                <option value="Opcion2">2024</option>
-                <option value="Opcion3">2023</option>
-                <option value="Opcion4">2022</option>
-                <option value="Opcion5">2021</option>
-                    
-            </select>
-        </div>
-
 
         <table>
-          <#list pilotos as p>
+          <#list pilotos>
            <tr>
                <td>1</td>
                <td>${p.nombre}</td>
                <td>${p.edad} años</td>
-               <td>Equipo: ${p.id_equipo}</td>
-               <td>Sin datos</td>
+               <td>Equipo: ${p.idEquipo}</td>
+               <td>Victorias: </td>
            </tr>
            </#list>
 
