@@ -142,3 +142,202 @@
 2026-03-09 10:42:31.183 Main - ARRANCANDO APLICACION
 2026-03-09 10:43:31.585 Main - ARRANCANDO APLICACION
 2026-03-09 10:48:34.140 Main - ARRANCANDO APLICACION
+2026-03-09 22:23:01.452 Main - ARRANCANDO APLICACION
+2026-03-09 22:23:05.734 FiltroController - Filtro after
+2026-03-09 22:23:05.735 FiltroController - /
+2026-03-09 22:23:05.779 FiltroController - Filtro after
+2026-03-09 22:23:05.780 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:23:05.857 FiltroController - Filtro after
+2026-03-09 22:23:05.858 FiltroController - /favicon.ico
+2026-03-09 22:23:09.639 FiltroController - Filtro after
+2026-03-09 22:23:09.640 FiltroController - /login
+2026-03-09 22:23:09.663 FiltroController - Filtro after
+2026-03-09 22:23:09.663 FiltroController - /inicio
+2026-03-09 22:23:09.705 FiltroController - Filtro after
+2026-03-09 22:23:09.708 FiltroController - Filtro after
+2026-03-09 22:23:09.708 FiltroController - /img/Iconos/formula1.jpg
+2026-03-09 22:23:09.706 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:23:09.709 FiltroController - Filtro after
+2026-03-09 22:23:09.710 FiltroController - Filtro after
+2026-03-09 22:23:09.710 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:23:09.711 FiltroController - /css/Styles.css
+2026-03-09 22:23:11.080 FiltroController - Filtro after
+2026-03-09 22:23:11.081 FiltroController - /pilotos
+2026-03-09 22:23:11.112 FiltroController - Filtro after
+2026-03-09 22:23:11.112 FiltroController - /css/Styles.css
+2026-03-09 22:23:11.115 FiltroController - Filtro after
+2026-03-09 22:23:11.115 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:23:11.117 FiltroController - Filtro after
+2026-03-09 22:23:11.118 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:23:13.247 FiltroController - Filtro after
+2026-03-09 22:23:13.247 FiltroController - /crear-piloto
+2026-03-09 22:23:13.281 FiltroController - Filtro after
+2026-03-09 22:23:13.281 FiltroController - Filtro after
+2026-03-09 22:23:13.281 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:23:13.281 FiltroController - /css/Styles.css
+2026-03-09 22:23:13.282 FiltroController - Filtro after
+2026-03-09 22:23:13.282 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:23:19.801 FiltroController - Filtro after
+2026-03-09 22:23:19.801 FiltroController - /crear-piloto
+2026-03-09 22:23:19.810 FiltroController - Filtro after
+2026-03-09 22:23:19.810 FiltroController - /pilotos
+2026-03-09 22:23:19.847 FiltroController - Filtro after
+2026-03-09 22:23:19.847 FiltroController - /css/Styles.css
+2026-03-09 22:23:19.847 FiltroController - Filtro after
+2026-03-09 22:23:19.847 FiltroController - Filtro after
+2026-03-09 22:23:19.848 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:23:19.848 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:23:23.427 FiltroController - Filtro after
+2026-03-09 22:23:23.427 FiltroController - /inicio
+2026-03-09 22:23:23.460 FiltroController - Filtro after
+2026-03-09 22:23:23.460 FiltroController - /css/Styles.css
+2026-03-09 22:23:23.461 FiltroController - Filtro after
+2026-03-09 22:23:23.462 FiltroController - Filtro after
+2026-03-09 22:23:23.462 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:23:23.462 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:23:23.462 FiltroController - Filtro after
+2026-03-09 22:23:23.463 FiltroController - /img/Iconos/formula1.jpg
+2026-03-09 22:23:24.497 FiltroController - Filtro after
+2026-03-09 22:23:24.497 FiltroController - /equipos
+2026-03-09 22:23:24.531 FiltroController - Filtro after
+2026-03-09 22:23:24.531 FiltroController - Filtro after
+2026-03-09 22:23:24.531 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:23:24.531 FiltroController - /css/Styles.css
+2026-03-09 22:23:24.533 FiltroController - Filtro after
+2026-03-09 22:23:24.533 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:23:25.230 FiltroController - Filtro after
+2026-03-09 22:23:25.230 FiltroController - /inicio
+2026-03-09 22:23:25.270 FiltroController - Filtro after
+2026-03-09 22:23:25.271 FiltroController - /css/Styles.css
+2026-03-09 22:23:25.271 FiltroController - Filtro after
+2026-03-09 22:23:25.271 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:23:25.272 FiltroController - Filtro after
+2026-03-09 22:23:25.272 FiltroController - Filtro after
+2026-03-09 22:23:25.272 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:23:25.272 FiltroController - /img/Iconos/formula1.jpg
+2026-03-09 22:23:26.127 FiltroController - Filtro after
+2026-03-09 22:23:26.127 FiltroController - /clasificacion
+2026-03-09 22:38:56.681 Main - ARRANCANDO APLICACION
+2026-03-09 22:39:00.596 FiltroController - Filtro after
+2026-03-09 22:39:00.597 FiltroController - /
+2026-03-09 22:39:00.641 FiltroController - Filtro after
+2026-03-09 22:39:00.642 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:39:05.142 FiltroController - Filtro after
+2026-03-09 22:39:05.142 FiltroController - /login
+2026-03-09 22:39:05.154 FiltroController - Filtro after
+2026-03-09 22:39:05.155 FiltroController - /inicio
+2026-03-09 22:39:05.198 FiltroController - Filtro after
+2026-03-09 22:39:05.200 FiltroController - /css/Styles.css
+2026-03-09 22:39:05.201 FiltroController - Filtro after
+2026-03-09 22:39:05.201 FiltroController - Filtro after
+2026-03-09 22:39:05.201 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:39:05.202 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:39:05.203 FiltroController - Filtro after
+2026-03-09 22:39:05.203 FiltroController - /img/Iconos/formula1.jpg
+2026-03-09 22:39:06.799 FiltroController - Filtro after
+2026-03-09 22:39:06.799 FiltroController - /equipos
+2026-03-09 22:41:48.128 Main - ARRANCANDO APLICACION
+2026-03-09 22:41:51.676 FiltroController - Filtro after
+2026-03-09 22:41:51.676 FiltroController - /equipos
+2026-03-09 22:41:51.718 FiltroController - Filtro after
+2026-03-09 22:41:51.719 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:41:51.718 FiltroController - Filtro after
+2026-03-09 22:41:51.719 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:41:51.718 FiltroController - Filtro after
+2026-03-09 22:41:51.720 FiltroController - /css/Styles.css
+2026-03-09 22:43:01.510 Main - ARRANCANDO APLICACION
+2026-03-09 22:43:05.858 FiltroController - Filtro after
+2026-03-09 22:43:05.858 FiltroController - /equipos
+2026-03-09 22:43:05.891 FiltroController - Filtro after
+2026-03-09 22:43:05.892 FiltroController - /css/Styles.css
+2026-03-09 22:43:05.892 FiltroController - Filtro after
+2026-03-09 22:43:05.893 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:43:05.893 FiltroController - Filtro after
+2026-03-09 22:43:05.894 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:43:06.457 FiltroController - Filtro after
+2026-03-09 22:43:06.457 FiltroController - /equipos
+2026-03-09 22:43:06.480 FiltroController - Filtro after
+2026-03-09 22:43:06.481 FiltroController - /css/Styles.css
+2026-03-09 22:43:06.481 FiltroController - Filtro after
+2026-03-09 22:43:06.481 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:43:06.481 FiltroController - Filtro after
+2026-03-09 22:43:06.481 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:43:08.917 FiltroController - Filtro after
+2026-03-09 22:43:08.918 FiltroController - /equipos
+2026-03-09 22:43:08.951 FiltroController - Filtro after
+2026-03-09 22:43:08.951 FiltroController - Filtro after
+2026-03-09 22:43:08.951 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:43:08.951 FiltroController - /css/Styles.css
+2026-03-09 22:43:08.952 FiltroController - Filtro after
+2026-03-09 22:43:08.952 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:43:11.092 FiltroController - Filtro after
+2026-03-09 22:43:11.093 FiltroController - /pilotos
+2026-03-09 22:43:11.126 FiltroController - Filtro after
+2026-03-09 22:43:11.126 FiltroController - /css/Styles.css
+2026-03-09 22:43:11.127 FiltroController - Filtro after
+2026-03-09 22:43:11.127 FiltroController - Filtro after
+2026-03-09 22:43:11.127 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:43:11.127 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:43:15.323 FiltroController - Filtro after
+2026-03-09 22:43:15.324 FiltroController - /clasificacion
+2026-03-09 22:43:18.754 FiltroController - Filtro after
+2026-03-09 22:43:18.754 FiltroController - /grand-prix
+2026-03-09 22:44:34.897 Main - ARRANCANDO APLICACION
+2026-03-09 22:44:38.150 FiltroController - Filtro after
+2026-03-09 22:44:38.150 FiltroController - /inicio
+2026-03-09 22:44:38.186 FiltroController - Filtro after
+2026-03-09 22:44:38.187 FiltroController - Filtro after
+2026-03-09 22:44:38.187 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:44:38.186 FiltroController - Filtro after
+2026-03-09 22:44:38.187 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:44:38.187 FiltroController - /css/Styles.css
+2026-03-09 22:44:38.189 FiltroController - Filtro after
+2026-03-09 22:44:38.190 FiltroController - /img/Iconos/formula1.jpg
+2026-03-09 22:44:54.955 FiltroController - Filtro after
+2026-03-09 22:44:54.956 FiltroController - /css/Styles.css
+2026-03-09 22:44:54.976 FiltroController - Filtro after
+2026-03-09 22:44:54.977 FiltroController - /.well-known/appspecific/com.chrome.devtools.json
+2026-03-09 22:45:26.548 FiltroController - Filtro after
+2026-03-09 22:45:26.548 FiltroController - /pilotos
+2026-03-09 22:45:26.582 FiltroController - Filtro after
+2026-03-09 22:45:26.583 FiltroController - /css/Styles.css
+2026-03-09 22:45:26.583 FiltroController - Filtro after
+2026-03-09 22:45:26.583 FiltroController - Filtro after
+2026-03-09 22:45:26.584 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:45:26.584 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:45:27.667 FiltroController - Filtro after
+2026-03-09 22:45:27.667 FiltroController - /crear-piloto
+2026-03-09 22:45:27.701 FiltroController - Filtro after
+2026-03-09 22:45:27.701 FiltroController - /css/Styles.css
+2026-03-09 22:45:27.703 FiltroController - Filtro after
+2026-03-09 22:45:27.703 FiltroController - Filtro after
+2026-03-09 22:45:27.703 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:45:27.703 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:45:29.501 FiltroController - Filtro after
+2026-03-09 22:45:29.501 FiltroController - /inicio
+2026-03-09 22:45:29.539 FiltroController - Filtro after
+2026-03-09 22:45:29.539 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:45:29.539 FiltroController - Filtro after
+2026-03-09 22:45:29.539 FiltroController - Filtro after
+2026-03-09 22:45:29.539 FiltroController - /css/Styles.css
+2026-03-09 22:45:29.539 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:45:29.542 FiltroController - Filtro after
+2026-03-09 22:45:29.542 FiltroController - /img/Iconos/formula1.jpg
+2026-03-09 22:45:30.578 FiltroController - Filtro after
+2026-03-09 22:45:30.578 FiltroController - /pilotos
+2026-03-09 22:45:30.610 FiltroController - Filtro after
+2026-03-09 22:45:30.610 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:45:30.610 FiltroController - Filtro after
+2026-03-09 22:45:30.611 FiltroController - Filtro after
+2026-03-09 22:45:30.611 FiltroController - /css/Styles.css
+2026-03-09 22:45:30.611 FiltroController - /img/Iconos/logooo.png
+2026-03-09 22:45:39.814 FiltroController - Filtro after
+2026-03-09 22:45:39.814 FiltroController - /inicio
+2026-03-09 22:45:39.851 FiltroController - Filtro after
+2026-03-09 22:45:39.852 FiltroController - Filtro after
+2026-03-09 22:45:39.852 FiltroController - /img/Iconos/perfil.png
+2026-03-09 22:45:39.852 FiltroController - /css/Styles.css
+2026-03-09 22:45:39.851 FiltroController - Filtro after
+2026-03-09 22:45:39.853 FiltroController - Filtro after
+2026-03-09 22:45:39.853 FiltroController - /img/Iconos/formula1.jpg
+2026-03-09 22:45:39.853 FiltroController - /img/Iconos/logooo.png

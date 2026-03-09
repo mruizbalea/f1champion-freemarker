@@ -6,6 +6,9 @@ public class Equipo {
     private String nombre;
     private String imagen;
 
+    public Equipo() {
+    }
+
     public Equipo(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;

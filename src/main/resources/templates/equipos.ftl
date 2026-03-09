@@ -31,14 +31,20 @@
 
     <h1>Equipos</h1>
 
-    <div class="container">
-        <#list listaEquipos as equipo>
-            <a href="/equipo?id=${equipo.id}">
-                <img src="img/coches/${equipo.imagen}" alt="${equipo.nombre}" />
-                <p>${equipo.nombre}</p>
-            </a>
-        </#list>
-    </div>
+    <#if equipos??>
+        <div class="container">
+            <#list equipos as equipo>
+                <a href="/equipo?id=${equipo.id}">
+                    <img src="img/Coches/${equipo.imagen}" alt="${equipo.nombre}" />
+                    <p>${equipo.nombre}</p>
+                </a>
+            </#list>
+        </div>
+    <#else>
+        <p>No hay equipos registrados.</p>
+    </#if>
+
+    <a href="/crear-equipo" class="boton">Crear nuevo equipo</a>
 
     <#include "volverinicio.ftl">
 

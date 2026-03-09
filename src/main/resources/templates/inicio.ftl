@@ -54,9 +54,6 @@
         
 
         <div>
-            <a href="/grand-prix" class="boton">Grand Prix</a>
-        </div>
-        <div>
             <a href="/equipos" class="boton">Equipos</a>
         </div>
         <div>

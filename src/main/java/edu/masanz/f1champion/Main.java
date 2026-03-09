@@ -1,5 +1,6 @@
 package edu.masanz.f1champion;
 
+import edu.masanz.f1champion.controller.EquiposController;
 import edu.masanz.f1champion.controller.PilotosController;
 import edu.masanz.f1champion.controller.UsersController;
 import edu.masanz.f1champion.controller.FiltroController;
@@ -49,26 +50,19 @@ public class Main {
         app.get("/piloto/editar/{id}", PilotosController::formularioPiloto);
         app.get("/piloto/eliminar/{id}", PilotosController::eliminarPiloto);
 
+
         // EQUIPOS
-        app.get("/equipos", UsersController::accederEquipos);
-
-
-        // CARRERAS
-        app.get("/grand-prix", UsersController::accederGrandPrix);
-
+        app.get("/equipos", EquiposController::listarEquipos);
+        app.get("/equipo/{id}", EquiposController::servirEquipo);
+        app.post("/crear-equipo", EquiposController::crearEquipo);
+        app.get("/crear-equipo", EquiposController::formularioEquipo);
+        app.post("/equipo/editar/{id}", EquiposController::editarEquipo);
+        app.get("/equipo/editar/{id}", EquiposController::formularioEquipo);
+        app.get("/equipo/eliminar/{id}", EquiposController::eliminarEquipo);
 
         // CLASIFICACION
         app.get("/clasificacion", UsersController::accederClasificacion);
 
-
-
-
-        // app.get("/lista-usuarios", UsersController::listarUsuario);
-        // app.get("/edita-usuario/{id}", UsersController::servirUsuario);
-        // app.post("/edita-usuario/{id}", UsersController::editarUsuario);
-        // app.get("/crea-usuario", UsersController::crearUsuario);
-        // app.post("/crea-usuario", UsersController::crearUsuario);
-        // app.get("/elimina-usuario/{id}", UsersController::eliminarUsuario);
 
         app.after("*", FiltroController::filtroAfter);
 
