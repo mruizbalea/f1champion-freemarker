@@ -69,7 +69,7 @@ public class PilotosDao {
         Object[] params = {
                 piloto.getNombre(),
                 piloto.getEdad(),
-                piloto.getId_equipo(),
+                piloto.getIdEquipo(),
                 piloto.getImagen(),
                 piloto.getId()
         };

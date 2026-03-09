@@ -43,7 +43,7 @@ public class Piloto {
         this.edad = edad;
     }
 
-    public int getId_equipo() {
+    public int getIdEquipo() {
         return idEquipo;
     }
 

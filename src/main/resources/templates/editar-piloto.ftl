@@ -67,26 +67,34 @@
             <#assign imagen = piloto.imagen>
         </#if>
 
-        <form method="post" action="${destino}">
+        <div>
 
+            <form method="post" action="${destino}">
 
-            <label>Nombre:</label>
-            <input type="text" name="nombre" value="${nombre} required">
+                <div>
+                    <label>Nombre:</label>
+                    <input type="text" name="nombre" value="${nombre}" required>
+                </div>
 
-            <label>Edad:</label>
-            <input type="number" name="edad" value="${edad} required">
+                <div>
+                    <label>Edad:</label>
+                    <input type="number" name="edad" value="${edad}" required>
+                </div>
 
-            <label>ID Equipo:</label>
-            <input type="number" name="idEquipo" value="${idEquipo} required">
+                <div>
+                    <label>ID Equipo:</label>
+                    <input type="number" name="idEquipo" value="${idEquipo}" required>
+                </div>
 
-            <button type="submit">Guardar</button>
+                <div>
+                    <button type="submit" class="boton">Guardar</button>
+                </div>
 
-        </form>
+            </form>
+        </div>
 
         <#include "volverinicio.ftl">
     </div>
-
-
 
 </body>
 

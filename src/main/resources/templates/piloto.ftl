@@ -50,7 +50,7 @@
     </div>
     
     <p class="nombre"><b>${piloto.nombre}</b></p>
-    <p class="equipo">${piloto.id_equipo}</p>
+    <p class="equipo">${piloto.idEquipo}</p>
 
     <p><b>Información Adicional</b></p>
 
@@ -59,10 +59,9 @@
         <ul>
             <li><img src="img\Iconos\piloto.png" width="20vh"><strong> Nombre: </strong>${piloto.nombre}</li>
             <li><img src="img\Iconos\campana.png" width="20vh"><strong> Edad: </strong>${piloto.edad}</li>
-            <li><img src="img\Iconos\trofeo.png" width="20vh"><strong> Equipo ID: </strong>${piloto.id_equipo}</li>
+            <li><img src="img\Iconos\trofeo.png" width="20vh"><strong> Equipo ID: </strong>${piloto.idEquipo}</li>
         </ul>
 
-        
     </div>
 
     <#include "volverinicio.ftl">
