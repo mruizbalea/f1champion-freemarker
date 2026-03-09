@@ -3,10 +3,8 @@ package edu.masanz.f1champion.controller;
 import edu.masanz.f1champion.dao.PilotosDao;
 import edu.masanz.f1champion.model.Piloto;
 import io.javalin.http.Context;
-import io.javalin.http.UploadedFile;
 import org.jetbrains.annotations.NotNull;
 
-import java.io.IOException;
 import java.util.*;
 
 public class PilotosController {
@@ -55,7 +53,7 @@ public class PilotosController {
 
         PilotosDao.crearPiloto(nombre, edad, idEquipo, "");
 
-        context.redirect("/lista-pilotos");
+        context.redirect("/pilotos");
     }
 
     public static void editarPiloto(Context context) {
@@ -63,13 +61,13 @@ public class PilotosController {
         int id = Integer.parseInt(context.pathParam("id"));
         String nombre = context.formParam("nombre");
         int edad = Integer.parseInt(context.formParam("edad"));
-        int idEquipo = Integer.parseInt(context.formParam("id_equipo"));
+        int idEquipo = Integer.parseInt(context.formParam("idEquipo"));
 
         Piloto piloto = new Piloto();
         piloto.setId(id);
         piloto.setNombre(nombre);
         piloto.setEdad(edad);
-        piloto.setId_equipo(idEquipo);
+        piloto.setIdEquipo(idEquipo);
 
         PilotosDao.actualizarPiloto(piloto);
 
@@ -81,7 +79,7 @@ public class PilotosController {
 
         PilotosDao.eliminarPiloto(id);
 
-        context.redirect("/lista-pilotos");
+        context.redirect("/pilotos");
     }
 
     public static void formularioPiloto(@NotNull Context context) {

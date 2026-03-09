@@ -65,12 +65,12 @@
         
     </div>
 
-
-    <a href="/piloto/editar/${piloto.id}" class="boton">Editar</a>
-    <a href="/piloto/eliminar/${piloto.id}" class="boton">Eliminar</a>
-
-
     <#include "volverinicio.ftl">
+
+    <div>
+        <a href="/piloto/editar/${piloto.id}" class="boton">Editar</a>
+        <a href="/piloto/eliminar/${piloto.id}" class="boton">Eliminar</a>
+    </div>
 
 </body>
 </html>

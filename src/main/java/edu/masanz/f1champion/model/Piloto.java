@@ -47,7 +47,7 @@ public class Piloto {
         return idEquipo;
     }
 
-    public void setId_equipo(int idEquipo) {
+    public void setIdEquipo(int idEquipo) {
         this.idEquipo = idEquipo;
     }
 

@@ -19,7 +19,7 @@ public class PilotosDao {
             piloto.setId((Integer) resultado[0][0]);
             piloto.setNombre((String) resultado[0][1]);
             piloto.setEdad((Integer) resultado[0][2]);
-            piloto.setId_equipo((Integer) resultado[0][3]);
+            piloto.setIdEquipo((Integer) resultado[0][3]);
             piloto.setImagen((String) resultado[0][4]);
 
             return piloto;
@@ -42,7 +42,7 @@ public class PilotosDao {
                 piloto.setId((Integer) objects[0]);
                 piloto.setNombre((String) objects[1]);
                 piloto.setEdad((Integer) objects[2]);
-                piloto.setId_equipo((Integer) objects[3]);
+                piloto.setIdEquipo((Integer) objects[3]);
                 piloto.setImagen((String) objects[4]);
 
                 pilotos.add(piloto);
