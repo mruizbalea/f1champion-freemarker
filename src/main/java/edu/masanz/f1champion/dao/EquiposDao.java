@@ -2,7 +2,6 @@ package edu.masanz.f1champion.dao;
 
 import edu.masanz.f1champion.database.ConnectionManager;
 import edu.masanz.f1champion.model.Equipo;
-import edu.masanz.f1champion.model.Piloto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,7 +9,7 @@ import java.util.List;
 public class EquiposDao {
 
     public static Equipo obtenerEquipo(int idEquipo) {
-        String sql = "SELECT id, nombre, imagen FROM equipos WHERE id = ?";
+        String sql = "SELECT id, nombre, fundador, nacionalidad, origen, exitos, imagen FROM equipos WHERE id = ?";
         Object[] params = {idEquipo};
         Object[][] resultado = ConnectionManager.ejecutarSelectSQL(sql, params);
 
@@ -19,7 +18,11 @@ public class EquiposDao {
 
             equipo.setId((Integer) resultado[0][0]);
             equipo.setNombre((String) resultado[0][1]);
-            equipo.setImagen((String) resultado[0][2]);
+            equipo.setFundador((String) resultado[0][2]);
+            equipo.setNacionalidad((String) resultado[0][3]);
+            equipo.setOrigen((String) resultado[0][4]);
+            equipo.setExitos((String) resultado[0][5]);
+            equipo.setImagen((String) resultado[0][6]);
 
             return equipo;
         }
@@ -29,7 +32,7 @@ public class EquiposDao {
     public static List<Equipo> obtenerEquipos() {
         List<Equipo> equipos = new ArrayList<>();
 
-        String sql = "SELECT id, nombre, imagen FROM equipos ORDER BY id DESC";
+        String sql = "SELECT id, nombre, fundador, nacionalidad, origen, exitos, imagen FROM equipos ORDER BY id DESC";
         Object[] params = {};
 
         Object[][] resultado = ConnectionManager.ejecutarSelectSQL(sql, params);
@@ -40,7 +43,11 @@ public class EquiposDao {
 
                 equipo.setId((Integer) objects[0]);
                 equipo.setNombre((String) objects[1]);
-                equipo.setImagen((String) objects[2]);
+                equipo.setFundador((String) objects[2]);
+                equipo.setNacionalidad((String) objects[3]);
+                equipo.setOrigen((String) objects[4]);
+                equipo.setExitos((String) objects[5]);
+                equipo.setImagen((String) objects[6]);
 
                 equipos.add(equipo);
             }
@@ -48,9 +55,9 @@ public class EquiposDao {
         return equipos;
     }
 
-    public static void crearEquipo(String nombre, String imagen) {
-        String sql = "INSERT INTO equipos (nombre, imagen) VALUES (?, ?)";
-        Object[] params = {nombre, imagen};
+    public static void crearEquipo(String nombre, String fundador, String nacionalidad, String origen, String exitos, String imagen) {
+        String sql = "INSERT INTO equipos (nombre, fundador, nacionalidad, origen, exitos, imagen) VALUES (?, ?, ?, ?, ?, ?)";
+        Object[] params = {nombre, fundador, nacionalidad, origen, exitos, imagen};
 
         long id = ConnectionManager.ejecutarInsertSQL(sql, params);
 
@@ -62,9 +69,13 @@ public class EquiposDao {
     }
 
     public static void actualizarEquipo(Equipo equipo) {
-        String sql = "UPDATE equipos SET nombre = ?, imagen = ? WHERE id = ?";
+        String sql = "UPDATE equipos SET nombre = ?, fundador = ?, nacionalidad = ?, origen = ?, exitos = ?, imagen = ? WHERE id = ?";
         Object[] params = {
                 equipo.getNombre(),
+                equipo.getFundador(),
+                equipo.getNacionalidad(),
+                equipo.getOrigen(),
+                equipo.getExitos(),
                 equipo.getImagen(),
                 equipo.getId()
         };

@@ -71,7 +71,7 @@ public class PilotosController {
 
         PilotosDao.actualizarPiloto(piloto);
 
-        context.redirect("/lista-pilotos");
+        context.redirect("/pilotos");
     }
 
     public static void eliminarPiloto(Context context) {

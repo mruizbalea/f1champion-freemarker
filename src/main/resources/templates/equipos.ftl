@@ -34,7 +34,7 @@
     <#if equipos??>
         <div class="container">
             <#list equipos as equipo>
-                <a href="/equipo?id=${equipo.id}">
+                <a href="/equipo/${equipo.id}">
                     <img src="img/Coches/${equipo.imagen}" alt="${equipo.nombre}" />
                     <p>${equipo.nombre}</p>
                 </a>
@@ -44,7 +44,9 @@
         <p>No hay equipos registrados.</p>
     </#if>
 
-    <a href="/crear-equipo" class="boton">Crear nuevo equipo</a>
+    <div>
+        <a href="/crear-equipo" class="boton">Crear nuevo equipo</a>
+    </div>
 
     <#include "volverinicio.ftl">
 

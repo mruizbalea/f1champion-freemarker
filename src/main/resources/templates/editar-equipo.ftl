@@ -55,11 +55,19 @@
 
         <#assign destino = "/crear-equipo">
         <#assign nombre = "">
+        <#assign fundador = "">
+        <#assign nacionalidad = "">
+        <#assign origen = "">
+        <#assign exitos = "">
         <#assign imagen = "">
 
         <#if equipo??>
             <#assign destino = "/equipo/editar/"+equipo.id>
             <#assign nombre = equipo.nombre>
+            <#assign fundador = equipo.fundador>
+            <#assign nacionalidad = equipo.nacionalidad>
+            <#assign origen = equipo.origen>
+            <#assign exitos = equipo.exitos>
             <#assign imagen = equipo.imagen>
         </#if>
 
@@ -70,6 +78,26 @@
                 <div>
                     <label>Nombre:</label>
                     <input type="text" name="nombre" value="${nombre}" required>
+                </div>
+
+                <div>
+                    <label>Fundador:</label>
+                    <input type="text" name="fundador" value="${fundador}" required>
+                </div>
+
+                <div>
+                    <label>Nacionalidad:</label>
+                    <input type="text" name="nacionalidad" value="${nacionalidad}" required>
+                </div>
+
+                <div>
+                    <label>Origen:</label>
+                    <input type="text" name="origen" value="${origen}" required>
+                </div>
+
+                <div>
+                    <label>Exitos:</label>
+                    <input type="text" name="exitos" value="${exitos}" required>
                 </div>
 
                 <div>

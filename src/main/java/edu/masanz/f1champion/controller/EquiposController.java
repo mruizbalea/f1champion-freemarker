@@ -35,14 +35,38 @@ public class EquiposController {
     public static void crearEquipo(Context context) {
 
         String nombre = "";
+        String fundador = "";
+        String nacionalidad = "";
+        String origen = "";
+        String exitos = "";
 
         nombre = context.formParam("nombre");
         if (nombre == null || nombre.isEmpty()){
             System.out.println("nombre = " + nombre);
             context.redirect("/inicio");
         }
+        fundador = context.formParam("fundador");
+        if (fundador == null || fundador.isEmpty()){
+            System.out.println("fundador = " + fundador);
+            context.redirect("/inicio");
+        }
+        nacionalidad = context.formParam("nacionalidad");
+        if (nacionalidad == null || nacionalidad.isEmpty()){
+            System.out.println("nacionalidad = " + nacionalidad);
+            context.redirect("/inicio");
+        }
+        origen = context.formParam("origen");
+        if (origen == null || origen.isEmpty()){
+            System.out.println("origen = " + origen);
+            context.redirect("/inicio");
+        }
+        exitos = context.formParam("exitos");
+        if (exitos == null || exitos.isEmpty()){
+            System.out.println("exitos = " + exitos);
+            context.redirect("/inicio");
+        }
 
-        EquiposDao.crearEquipo(nombre, "");
+        EquiposDao.crearEquipo(nombre, fundador, nacionalidad, origen, exitos, "");
 
         context.redirect("/equipos");
     }
@@ -51,14 +75,22 @@ public class EquiposController {
 
         int id = Integer.parseInt(context.pathParam("id"));
         String nombre = context.formParam("nombre");
+        String fundador = context.formParam("fundador");
+        String nacionalidad = context.formParam("nacionalidad");
+        String origen = context.formParam("origen");
+        String exitos = context.formParam("exitos");
 
         Equipo equipo = new Equipo();
         equipo.setId(id);
         equipo.setNombre(nombre);
+        equipo.setFundador(fundador);
+        equipo.setNacionalidad(nacionalidad);
+        equipo.setOrigen(origen);
+        equipo.setExitos(exitos);
 
         EquiposDao.actualizarEquipo(equipo);
 
-        context.redirect("/lista-equipos");
+        context.redirect("/equipos");
     }
 
     public static void eliminarEquipo(Context context) {

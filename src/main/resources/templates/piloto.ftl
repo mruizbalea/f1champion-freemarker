@@ -67,8 +67,8 @@
     <#include "volverinicio.ftl">
 
     <div>
-        <a href="/piloto/editar/${piloto.id}" class="boton">Editar</a>
-        <a href="/piloto/eliminar/${piloto.id}" class="boton">Eliminar</a>
+        <a href="/piloto/editar/${piloto.id}" class="boton">Editar piloto</a>
+        <a href="/piloto/eliminar/${piloto.id}" class="boton">Eliminar piloto</a>
     </div>
 
 </body>

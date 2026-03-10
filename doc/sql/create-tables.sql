@@ -14,6 +14,10 @@ DROP TABLE IF EXISTS equipos;
 CREATE TABLE equipos (
     id int NOT NULL AUTO_INCREMENT,
     nombre varchar(255) NOT NULL,
+    fundador varchar(255) NOT NULL,
+    nacionalidad varchar(255) NOT NULL,
+    origen varchar(255) NOT NULL,
+    exitos varchar(255) NOT NULL,
     imagen  varchar(255) NOT NULL,
     PRIMARY KEY (id)
 );
