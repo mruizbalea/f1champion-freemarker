@@ -100,6 +100,10 @@
                     <input type="text" name="exitos" value="${exitos}" required>
                 </div>
 
+                <img src="${imagen}">
+                <label for="imagen">Imagen</label>
+                <input type="file" id="imagen" name="imagen">
+
                 <div>
                     <button type="submit" class="boton">Guardar</button>
                 </div>

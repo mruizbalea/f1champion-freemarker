@@ -9,7 +9,7 @@ import java.util.List;
 public class EquiposDao {
 
     public static Equipo obtenerEquipo(int idEquipo) {
-        String sql = "SELECT id, nombre, fundador, nacionalidad, origen, exitos, imagen FROM equipos WHERE id = ?";
+        String sql = "SELECT id, nombre, fundador, nacionalidad, origen, exitos, textoImagen FROM equipos WHERE id = ?";
         Object[] params = {idEquipo};
         Object[][] resultado = ConnectionManager.ejecutarSelectSQL(sql, params);
 
@@ -32,7 +32,7 @@ public class EquiposDao {
     public static List<Equipo> obtenerEquipos() {
         List<Equipo> equipos = new ArrayList<>();
 
-        String sql = "SELECT id, nombre, fundador, nacionalidad, origen, exitos, imagen FROM equipos ORDER BY id DESC";
+        String sql = "SELECT id, nombre, fundador, nacionalidad, origen, exitos, textoImagen FROM equipos ORDER BY id DESC";
         Object[] params = {};
 
         Object[][] resultado = ConnectionManager.ejecutarSelectSQL(sql, params);
@@ -56,7 +56,7 @@ public class EquiposDao {
     }
 
     public static void crearEquipo(String nombre, String fundador, String nacionalidad, String origen, String exitos, String imagen) {
-        String sql = "INSERT INTO equipos (nombre, fundador, nacionalidad, origen, exitos, imagen) VALUES (?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO equipos (nombre, fundador, nacionalidad, origen, exitos, textoImagen) VALUES (?, ?, ?, ?, ?, ?)";
         Object[] params = {nombre, fundador, nacionalidad, origen, exitos, imagen};
 
         long id = ConnectionManager.ejecutarInsertSQL(sql, params);
@@ -69,7 +69,7 @@ public class EquiposDao {
     }
 
     public static void actualizarEquipo(Equipo equipo) {
-        String sql = "UPDATE equipos SET nombre = ?, fundador = ?, nacionalidad = ?, origen = ?, exitos = ?, imagen = ? WHERE id = ?";
+        String sql = "UPDATE equipos SET nombre = ?, fundador = ?, nacionalidad = ?, origen = ?, exitos = ?, textoImagen = ? WHERE id = ?";
         Object[] params = {
                 equipo.getNombre(),
                 equipo.getFundador(),

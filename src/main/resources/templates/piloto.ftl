@@ -46,7 +46,7 @@
     <#include "menu.ftl">
 
     <div>
-        <img src="${piloto.imagen!"/img/Iconos/piloto.png"}" alt="${piloto.nombre}" width="300vh">
+        <img src="${piloto.imagen!'/img/Iconos/piloto.png'}" alt="${piloto.nombre}" width="300vh">
     </div>
     
     <p class="nombre"><b>${piloto.nombre}</b></p>
@@ -57,9 +57,9 @@
     <div>
         
         <ul>
-            <li><img src="img\Iconos\piloto.png" width="20vh"><strong> Nombre: </strong>${piloto.nombre}</li>
-            <li><img src="img\Iconos\campana.png" width="20vh"><strong> Edad: </strong>${piloto.edad}</li>
-            <li><img src="img\Iconos\trofeo.png" width="20vh"><strong> Equipo ID: </strong>${piloto.idEquipo}</li>
+            <li><img src="\img\Iconos\piloto.png" width="20vh"><strong> Nombre: </strong>${piloto.nombre}</li>
+            <li><img src="\img\Iconos\campana.png" width="20vh"><strong> Edad: </strong>${piloto.edad}</li>
+            <li><img src="\img\Iconos\trofeo.png" width="20vh"><strong> Equipo ID: </strong>${piloto.idEquipo}</li>
         </ul>
 
     </div>

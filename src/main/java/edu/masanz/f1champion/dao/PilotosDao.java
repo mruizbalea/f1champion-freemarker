@@ -9,7 +9,7 @@ import java.util.List;
 public class PilotosDao {
 
     public static Piloto obtenerPiloto(int idPiloto) {
-        String sql = "SELECT id, nombre, edad, id_equipo, imagen FROM pilotos WHERE id = ?";
+        String sql = "SELECT id, nombre, edad, id_equipo, textoImagen FROM pilotos WHERE id = ?";
         Object[] params = {idPiloto};
         Object[][] resultado = ConnectionManager.ejecutarSelectSQL(sql, params);
 
@@ -30,7 +30,7 @@ public class PilotosDao {
     public static List<Piloto> obtenerPilotos() {
         List<Piloto> pilotos = new ArrayList<>();
 
-        String sql = "SELECT id, nombre, edad, id_equipo, imagen FROM pilotos ORDER BY id DESC";
+        String sql = "SELECT id, nombre, edad, id_equipo, textoImagen FROM pilotos ORDER BY id DESC";
         Object[] params = {};
 
         Object[][] resultado = ConnectionManager.ejecutarSelectSQL(sql, params);
@@ -52,7 +52,7 @@ public class PilotosDao {
     }
 
     public static void crearPiloto(String nombre, int edad, int idEquipo, String imagen) {
-        String sql = "INSERT INTO pilotos (nombre, edad, id_equipo, imagen) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO pilotos (nombre, edad, id_equipo, textoImagen) VALUES (?, ?, ?, ?)";
         Object[] params = {nombre, edad, idEquipo, imagen};
 
         long id = ConnectionManager.ejecutarInsertSQL(sql, params);
@@ -65,7 +65,7 @@ public class PilotosDao {
     }
 
     public static void actualizarPiloto(Piloto piloto) {
-        String sql = "UPDATE pilotos SET nombre = ?, edad = ?, id_equipo = ?, imagen = ? WHERE id = ?";
+        String sql = "UPDATE pilotos SET nombre = ?, edad = ?, id_equipo = ?, textoImagen = ? WHERE id = ?";
         Object[] params = {
                 piloto.getNombre(),
                 piloto.getEdad(),

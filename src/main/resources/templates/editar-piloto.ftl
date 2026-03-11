@@ -64,7 +64,9 @@
             <#assign nombre = piloto.nombre>
             <#assign edad = piloto.edad>
             <#assign idEquipo = piloto.idEquipo>
-            <#assign imagen = piloto.imagen>
+            <#if piloto.imagen??>
+                <#assign imagen = piloto.imagen>
+            </#if>
         </#if>
 
         <div>
@@ -85,6 +87,10 @@
                     <label>ID Equipo:</label>
                     <input type="number" name="idEquipo" value="${idEquipo}" required>
                 </div>
+
+                <img src="${imagen!'/img/Iconos/piloto.png'}">
+                <label for="imagen">Imagen</label>
+                <input type="file" id="imagen" name="imagen">
 
                 <div>
                     <button type="submit" class="boton">Guardar</button>

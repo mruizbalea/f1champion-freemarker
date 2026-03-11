@@ -9,6 +9,6 @@
             <li><a href="/pilotos">Pilotos</a></li>
         </ul>
     </div>
-    <img src="img\Iconos\logooo.png" class="menu_img1">
-    <img src="img\Iconos\perfil.png" class="menu_img2">
+    <img src="\img\Iconos\logooo.png" class="menu_img1">
+    <img src="\img\Iconos\perfil.png" class="menu_img2">
 </div>

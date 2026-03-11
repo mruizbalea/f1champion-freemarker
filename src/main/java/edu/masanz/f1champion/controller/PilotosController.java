@@ -3,8 +3,10 @@ package edu.masanz.f1champion.controller;
 import edu.masanz.f1champion.dao.PilotosDao;
 import edu.masanz.f1champion.model.Piloto;
 import io.javalin.http.Context;
+import io.javalin.http.UploadedFile;
 import org.jetbrains.annotations.NotNull;
 
+import java.io.IOException;
 import java.util.*;
 
 public class PilotosController {
@@ -35,6 +37,7 @@ public class PilotosController {
         String nombre = "";
         int edad = 0;
         int idEquipo = 0;
+        String textoImagen = "";
 
         nombre = context.formParam("nombre");
         if (nombre == null || nombre.isEmpty()){
@@ -50,8 +53,19 @@ public class PilotosController {
             context.redirect("/inicio");
         }
 
+        UploadedFile archivo = context.uploadedFile("imagen");
+        if (archivo != null) {
+            try {
+                byte[] contenido = archivo.content().readAllBytes();
+                String encodedString = Base64.getEncoder().encodeToString(contenido);
+                textoImagen = "data:image/png;base64,"+encodedString;
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
 
-        PilotosDao.crearPiloto(nombre, edad, idEquipo, "");
+
+        PilotosDao.crearPiloto(nombre, edad, idEquipo, textoImagen);
 
         context.redirect("/pilotos");
     }
@@ -62,6 +76,8 @@ public class PilotosController {
         String nombre = context.formParam("nombre");
         int edad = Integer.parseInt(context.formParam("edad"));
         int idEquipo = Integer.parseInt(context.formParam("idEquipo"));
+
+
 
         Piloto piloto = new Piloto();
         piloto.setId(id);

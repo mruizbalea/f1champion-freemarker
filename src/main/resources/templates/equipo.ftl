@@ -33,7 +33,7 @@
     <h1>${equipo.nombre}</h1><br>
 
     <div>
-        <img src="img\Escuderia\image (13).png" alt="${equipo.nombre}" width="420vh"><br>
+        <img src="\img\Escuderia\RedBull.png" alt="${equipo.nombre}" width="420vh"><br>
     </div>
     
 
@@ -44,10 +44,10 @@
     <div class="texto">
         
         <ul>
-            <li><img src="img\Iconos\ubi.png" width="20vh"><strong> Fundador: </strong>${equipo.fundador}</li>
-            <li><img src="img\Iconos\ubi2.png" width="20vh"><strong> Nacionalidad: </strong>${equipo.nacionalidad}</li>
-            <li><img src="img\Iconos\campana.png" width="20vh"><strong> Origen: </strong>${equipo.origen}</li>
-            <li><img src="img\Iconos\trofeo.png" width="20vh"><strong> Éxitos: </strong>${equipo.exitos}</li>
+            <li><img src="\img\Iconos\ubi.png" width="20vh"><strong> Fundador: </strong>${equipo.fundador}</li>
+            <li><img src="\img\Iconos\ubi2.png" width="20vh"><strong> Nacionalidad: </strong>${equipo.nacionalidad}</li>
+            <li><img src="\img\Iconos\campana.png" width="20vh"><strong> Origen: </strong>${equipo.origen}</li>
+            <li><img src="\img\Iconos\trofeo.png" width="20vh"><strong> Éxitos: </strong>${equipo.exitos}</li>
         </ul>
 
         <br>

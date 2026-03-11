@@ -6,7 +6,7 @@ CREATE TABLE pilotos (
     nombre varchar(255) NOT NULL,
     edad int NOT NULL,
     id_equipo int NOT NULL,
-    imagen  varchar(255) NOT NULL,
+    textoImagen  varchar(255),
     PRIMARY KEY (id)
 );
 
@@ -18,6 +18,6 @@ CREATE TABLE equipos (
     nacionalidad varchar(255) NOT NULL,
     origen varchar(255) NOT NULL,
     exitos varchar(255) NOT NULL,
-    imagen  varchar(255) NOT NULL,
+    textoImagen  varchar(255),
     PRIMARY KEY (id)
 );
