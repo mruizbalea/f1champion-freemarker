@@ -50,12 +50,11 @@
     <div>
 
         <table>
-          <#list pilotos>
+          <#list pilotos as piloto>
            <tr>
-               <td>1</td>
-               <td>${p.nombre}</td>
-               <td>${p.edad} años</td>
-               <td>Equipo: ${p.idEquipo}</td>
+               <td>${piloto.nombre}</td>
+               <td>${piloto.edad} años</td>
+               <td>Equipo: ${piloto.idEquipo}</td>
                <td>Victorias: </td>
            </tr>
            </#list>

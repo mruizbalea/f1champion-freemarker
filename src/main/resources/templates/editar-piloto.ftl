@@ -88,7 +88,7 @@
                     <input type="number" name="idEquipo" value="${idEquipo}" required>
                 </div>
 
-                <img src="${imagen!'/img/Iconos/piloto.png'}">
+                <img src="${imagen}">
                 <label for="imagen">Imagen</label>
                 <input type="file" id="imagen" name="imagen">
 

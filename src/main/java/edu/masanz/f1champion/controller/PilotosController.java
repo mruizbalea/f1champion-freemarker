@@ -15,6 +15,11 @@ public class PilotosController {
         Map<String, Object> model = new HashMap<>();
 
         List<Piloto> pilotos = PilotosDao.obtenerPilotos();
+        for (Piloto piloto : pilotos) {
+            if(piloto.getImagen() == null || piloto.getImagen().trim().isEmpty()){
+                piloto.setImagen("/img/Iconos/piloto.png");
+            }
+        }
 
         model.put("pilotos", pilotos);
 
@@ -26,6 +31,11 @@ public class PilotosController {
 
         int id = Integer.parseInt(context.pathParam("id"));
         Piloto piloto = PilotosDao.obtenerPiloto(id);
+
+        if(piloto.getImagen() == null || piloto.getImagen().trim().isEmpty()){
+            piloto.setImagen("/img/Iconos/piloto.png");
+        }
+
 
         model.put("piloto", piloto);
 

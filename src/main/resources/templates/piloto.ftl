@@ -46,7 +46,7 @@
     <#include "menu.ftl">
 
     <div>
-        <img src="${piloto.imagen!'/img/Iconos/piloto.png'}" alt="${piloto.nombre}" width="300vh">
+        <img src="${piloto.imagen}" alt="${piloto.nombre}" width="300vh">
     </div>
     
     <p class="nombre"><b>${piloto.nombre}</b></p>
