@@ -1,5 +1,3 @@
 DROP DATABASE IF EXISTS f1_db;
 
 CREATE DATABASE f1_db;
-
-USE f1_db;
