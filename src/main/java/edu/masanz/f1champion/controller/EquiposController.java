@@ -2,6 +2,7 @@ package edu.masanz.f1champion.controller;
 
 import edu.masanz.f1champion.dao.EquiposDao;
 import edu.masanz.f1champion.model.Equipo;
+import edu.masanz.f1champion.model.Piloto;
 import io.javalin.http.Context;
 import org.jetbrains.annotations.NotNull;
 
@@ -16,6 +17,12 @@ public class EquiposController {
 
         List<Equipo> equipos = EquiposDao.obtenerEquipos();
 
+        for (Equipo equipo : equipos) {
+            if(equipo.getImagen() == null || equipo.getImagen().trim().isEmpty()){
+                equipo.setImagen("/img/Iconos/logooo.png");
+            }
+        }
+
         model.put("equipos", equipos);
 
         context.render("/templates/equipos.ftl", model);
@@ -26,6 +33,10 @@ public class EquiposController {
 
         int id = Integer.parseInt(context.pathParam("id"));
         Equipo equipo = EquiposDao.obtenerEquipo(id);
+
+        if(equipo.getImagen() == null || equipo.getImagen().trim().isEmpty()){
+            equipo.setImagen("/img/Iconos/logooo.png");
+        }
 
         model.put("equipo", equipo);
 

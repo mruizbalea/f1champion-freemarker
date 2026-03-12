@@ -20,6 +20,7 @@ public class PilotosController {
         Map<String, Object> model = new HashMap<>();
 
         List<Piloto> pilotos = PilotosDao.obtenerPilotos();
+
         for (Piloto piloto : pilotos) {
             if(piloto.getImagen() == null || piloto.getImagen().trim().isEmpty()){
                 piloto.setImagen("/img/Iconos/pilotoHD.jpg");
@@ -40,7 +41,6 @@ public class PilotosController {
         if(piloto.getImagen() == null || piloto.getImagen().trim().isEmpty()){
             piloto.setImagen("/img/Iconos/pilotoHD.jpg");
         }
-
 
         model.put("piloto", piloto);
 

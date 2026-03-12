@@ -1,7 +1,13 @@
 package edu.masanz.f1champion.controller;
 
+import edu.masanz.f1champion.dao.PilotosDao;
+import edu.masanz.f1champion.model.Piloto;
 import io.javalin.http.Context;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class UsersController {
 
@@ -18,8 +24,13 @@ public class UsersController {
     }
 
     public static void accederClasificacion(@NotNull Context context) {
+        Map<String, Object> model = new HashMap<>();
 
-        context.render("/templates/clasificacion.ftl");
+        List<Piloto> pilotos = PilotosDao.obtenerPilotos();
+
+        model.put("pilotos", pilotos);
+
+        context.render("/templates/clasificacion.ftl", model);
     }
 
     public static void login(@NotNull Context context) {

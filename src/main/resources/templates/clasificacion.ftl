@@ -48,7 +48,6 @@
     <h1>Clasificación</h1>
 
     <div>
-
         <table>
             <tr>
                 <th>Piloto</th>
@@ -56,14 +55,21 @@
                 <th>Equipo</th>
                 <th>Victorias</th>
             </tr>
-            <#list pilotos as piloto>
-            <tr>
-                <td>${piloto.nombre}</td>
-                <td>${piloto.edad} años</td>
-                <td>${piloto.idEquipo}</td>
-                <td>${piloto.victorias}</td>
-            </tr>
-            </#list>
+            <#if pilotos??>
+                <#list pilotos as piloto>
+
+                    <tr>
+                        <td>${piloto.nombre}</td>
+                        <td>${piloto.edad} años</td>
+                        <td>${piloto.idEquipo}</td>
+                        <td>${piloto.victorias}</td>
+                    </tr>
+
+                </#list>
+            <#else>
+                <p>No hay pilotos registrados.</p>
+            </#if>
+
         </table>
 
         <#include "volverinicio.ftl">

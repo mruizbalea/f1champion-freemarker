@@ -33,9 +33,8 @@
     <h1>${equipo.nombre}</h1><br>
 
     <div>
-        <img src="\img\Escuderia\RedBull.png" alt="${equipo.nombre}" width="420vh"><br>
+        <img src="${equipo.imagen}" alt="${equipo.nombre}" width="420vh"><br>
     </div>
-    
 
     <div class="texto">
         <p><strong>Información adicional</strong></p>
