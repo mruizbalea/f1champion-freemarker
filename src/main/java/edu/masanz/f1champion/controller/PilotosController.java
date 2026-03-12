@@ -1,9 +1,12 @@
 package edu.masanz.f1champion.controller;
 
+import edu.masanz.f1champion.Main;
 import edu.masanz.f1champion.dao.PilotosDao;
 import edu.masanz.f1champion.model.Piloto;
 import io.javalin.http.Context;
 import io.javalin.http.UploadedFile;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
@@ -11,13 +14,15 @@ import java.util.*;
 
 public class PilotosController {
 
+    private static final Logger logger = LogManager.getLogger(PilotosController.class);
+
     public static void listarPilotos(Context context) {
         Map<String, Object> model = new HashMap<>();
 
         List<Piloto> pilotos = PilotosDao.obtenerPilotos();
         for (Piloto piloto : pilotos) {
             if(piloto.getImagen() == null || piloto.getImagen().trim().isEmpty()){
-                piloto.setImagen("/img/Iconos/piloto.png");
+                piloto.setImagen("/img/Iconos/pilotoHD.jpg");
             }
         }
 
@@ -33,7 +38,7 @@ public class PilotosController {
         Piloto piloto = PilotosDao.obtenerPiloto(id);
 
         if(piloto.getImagen() == null || piloto.getImagen().trim().isEmpty()){
-            piloto.setImagen("/img/Iconos/piloto.png");
+            piloto.setImagen("/img/Iconos/pilotoHD.jpg");
         }
 
 
@@ -46,6 +51,7 @@ public class PilotosController {
 
         String nombre = "";
         int edad = 0;
+        int victorias = 0;
         int idEquipo = 0;
         String textoImagen = "";
 
@@ -56,10 +62,10 @@ public class PilotosController {
         }
         try {
             edad = Integer.parseInt(context.formParam("edad"));
+            victorias = Integer.parseInt(context.formParam("victorias"));
             idEquipo = Integer.parseInt(context.formParam("idEquipo"));
         } catch (Exception e) {
-            System.out.println("edad = " + edad);
-            System.out.println("idEquipo = " + idEquipo);
+
             context.redirect("/inicio");
         }
 
@@ -75,7 +81,7 @@ public class PilotosController {
         }
 
 
-        PilotosDao.crearPiloto(nombre, edad, idEquipo, textoImagen);
+        PilotosDao.crearPiloto(nombre, edad, victorias, idEquipo, textoImagen);
 
         context.redirect("/pilotos");
     }
@@ -85,6 +91,7 @@ public class PilotosController {
         int id = Integer.parseInt(context.pathParam("id"));
         String nombre = context.formParam("nombre");
         int edad = Integer.parseInt(context.formParam("edad"));
+        int victorias = Integer.parseInt(context.formParam("victorias"));
         int idEquipo = Integer.parseInt(context.formParam("idEquipo"));
 
 
@@ -93,6 +100,7 @@ public class PilotosController {
         piloto.setId(id);
         piloto.setNombre(nombre);
         piloto.setEdad(edad);
+        piloto.setVictorias(victorias);
         piloto.setIdEquipo(idEquipo);
 
         PilotosDao.actualizarPiloto(piloto);

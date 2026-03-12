@@ -56,6 +56,7 @@
         <#assign destino = "/crear-piloto">
         <#assign nombre = "">
         <#assign edad = 0>
+        <#assign victorias = 0>
         <#assign idEquipo = 0>
         <#assign imagen = "">
 
@@ -63,6 +64,7 @@
             <#assign destino = "/piloto/editar/"+piloto.id>
             <#assign nombre = piloto.nombre>
             <#assign edad = piloto.edad>
+            <#assign victorias = piloto.victorias>
             <#assign idEquipo = piloto.idEquipo>
             <#if piloto.imagen??>
                 <#assign imagen = piloto.imagen>
@@ -81,6 +83,11 @@
                 <div>
                     <label>Edad:</label>
                     <input type="number" name="edad" value="${edad}" required>
+                </div>
+
+                <div>
+                    <label>Victorias:</label>
+                    <input type="number" name="victorias" value="${victorias}" required>
                 </div>
 
                 <div>

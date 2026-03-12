@@ -50,15 +50,20 @@
     <div>
 
         <table>
-          <#list pilotos as piloto>
-           <tr>
-               <td>${piloto.nombre}</td>
-               <td>${piloto.edad} años</td>
-               <td>Equipo: ${piloto.idEquipo}</td>
-               <td>Victorias: </td>
-           </tr>
-           </#list>
-
+            <tr>
+                <th>Piloto</th>
+                <th>Edad</th>
+                <th>Equipo</th>
+                <th>Victorias</th>
+            </tr>
+            <#list pilotos as piloto>
+            <tr>
+                <td>${piloto.nombre}</td>
+                <td>${piloto.edad} años</td>
+                <td>${piloto.idEquipo}</td>
+                <td>${piloto.victorias}</td>
+            </tr>
+            </#list>
         </table>
 
         <#include "volverinicio.ftl">

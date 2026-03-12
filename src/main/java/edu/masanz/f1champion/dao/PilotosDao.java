@@ -9,7 +9,7 @@ import java.util.List;
 public class PilotosDao {
 
     public static Piloto obtenerPiloto(int idPiloto) {
-        String sql = "SELECT id, nombre, edad, id_equipo, textoImagen FROM pilotos WHERE id = ?";
+        String sql = "SELECT id, nombre, edad, victorias, id_equipo, textoImagen FROM pilotos WHERE id = ?";
         Object[] params = {idPiloto};
         Object[][] resultado = ConnectionManager.ejecutarSelectSQL(sql, params);
 
@@ -19,8 +19,9 @@ public class PilotosDao {
             piloto.setId((Integer) resultado[0][0]);
             piloto.setNombre((String) resultado[0][1]);
             piloto.setEdad((Integer) resultado[0][2]);
-            piloto.setIdEquipo((Integer) resultado[0][3]);
-            piloto.setImagen((String) resultado[0][4]);
+            piloto.setVictorias((Integer) resultado[0][3]);
+            piloto.setIdEquipo((Integer) resultado[0][4]);
+            piloto.setImagen((String) resultado[0][5]);
 
             return piloto;
         }
@@ -30,7 +31,7 @@ public class PilotosDao {
     public static List<Piloto> obtenerPilotos() {
         List<Piloto> pilotos = new ArrayList<>();
 
-        String sql = "SELECT id, nombre, edad, id_equipo, textoImagen FROM pilotos ORDER BY id DESC";
+        String sql = "SELECT id, nombre, edad, victorias, id_equipo, textoImagen FROM pilotos ORDER BY id DESC";
         Object[] params = {};
 
         Object[][] resultado = ConnectionManager.ejecutarSelectSQL(sql, params);
@@ -42,8 +43,9 @@ public class PilotosDao {
                 piloto.setId((Integer) objects[0]);
                 piloto.setNombre((String) objects[1]);
                 piloto.setEdad((Integer) objects[2]);
-                piloto.setIdEquipo((Integer) objects[3]);
-                piloto.setImagen((String) objects[4]);
+                piloto.setVictorias((Integer) objects[3]);
+                piloto.setIdEquipo((Integer) objects[4]);
+                piloto.setImagen((String) objects[5]);
 
                 pilotos.add(piloto);
             }
@@ -51,9 +53,9 @@ public class PilotosDao {
         return pilotos;
     }
 
-    public static void crearPiloto(String nombre, int edad, int idEquipo, String imagen) {
-        String sql = "INSERT INTO pilotos (nombre, edad, id_equipo, textoImagen) VALUES (?, ?, ?, ?)";
-        Object[] params = {nombre, edad, idEquipo, imagen};
+    public static void crearPiloto(String nombre, int edad, int victorias, int idEquipo, String imagen) {
+        String sql = "INSERT INTO pilotos (nombre, edad, victorias, id_equipo, textoImagen) VALUES (?, ?, ?, ?, ?)";
+        Object[] params = {nombre, edad, victorias, idEquipo, imagen};
 
         long id = ConnectionManager.ejecutarInsertSQL(sql, params);
 
@@ -65,10 +67,11 @@ public class PilotosDao {
     }
 
     public static void actualizarPiloto(Piloto piloto) {
-        String sql = "UPDATE pilotos SET nombre = ?, edad = ?, id_equipo = ?, textoImagen = ? WHERE id = ?";
+        String sql = "UPDATE pilotos SET nombre = ?, edad = ?, victorias = ?, id_equipo = ?, textoImagen = ? WHERE id = ?";
         Object[] params = {
                 piloto.getNombre(),
                 piloto.getEdad(),
+                piloto.getVictorias(),
                 piloto.getIdEquipo(),
                 piloto.getImagen(),
                 piloto.getId()

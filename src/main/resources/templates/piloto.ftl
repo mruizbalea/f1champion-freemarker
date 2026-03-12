@@ -59,7 +59,8 @@
         <ul>
             <li><img src="\img\Iconos\piloto.png" width="20vh"><strong> Nombre: </strong>${piloto.nombre}</li>
             <li><img src="\img\Iconos\campana.png" width="20vh"><strong> Edad: </strong>${piloto.edad}</li>
-            <li><img src="\img\Iconos\trofeo.png" width="20vh"><strong> Equipo ID: </strong>${piloto.idEquipo}</li>
+            <li><img src="\img\Iconos\trofeo.png" width="20vh"><strong> Victorias: </strong>${piloto.victorias}</li>
+            <li><img src="\img\Iconos\ubi.png" width="20vh"><strong> Equipo ID: </strong>${piloto.idEquipo}</li>
         </ul>
 
     </div>

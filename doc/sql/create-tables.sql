@@ -5,6 +5,7 @@ CREATE TABLE pilotos (
     id int NOT NULL AUTO_INCREMENT,
     nombre varchar(255) NOT NULL,
     edad int NOT NULL,
+    victorias int NOT NULL,
     id_equipo int NOT NULL,
     textoImagen  varchar(255),
     PRIMARY KEY (id)

@@ -5,16 +5,18 @@ public class Piloto {
     private int id;
     private String nombre;
     private int edad;
+    private int victorias;
     private int idEquipo;
     private String imagen;
 
     public Piloto() {
     }
 
-    public Piloto(int id, String nombre, int edad, int idEquipo) {
+    public Piloto(int id, String nombre, int edad, int victorias, int idEquipo) {
         this.id = id;
         this.nombre = nombre;
         this.edad = edad;
+        this.victorias = victorias;
         this.idEquipo = idEquipo;
         this.imagen = "";
     }
@@ -43,6 +45,14 @@ public class Piloto {
         this.edad = edad;
     }
 
+    public int getVictorias() {
+        return victorias;
+    }
+
+    public void setVictorias(int victorias) {
+        this.victorias = victorias;
+    }
+
     public int getIdEquipo() {
         return idEquipo;
     }
@@ -65,6 +75,7 @@ public class Piloto {
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", edad=" + edad +
+                ", victorias=" + victorias +
                 ", idEquipo=" + idEquipo +
                 ", imagen='" + imagen + '\'' +
                 '}';

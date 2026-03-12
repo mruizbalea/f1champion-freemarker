@@ -1,19 +1,19 @@
 USE f1_db;
 
-INSERT INTO pilotos (id, nombre, edad, id_equipo, textoImagen)
-VALUES (1, 'Alonso', 22, 1, "");
+INSERT INTO pilotos (id, nombre, edad, victorias, id_equipo, textoImagen)
+VALUES (1, 'Alonso', 22, 2, 1, "");
 
-INSERT INTO pilotos (id, nombre, edad, id_equipo, textoImagen)
-VALUES (2, 'Hamilton', 23, 2, "");
+INSERT INTO pilotos (id, nombre, edad, victorias, id_equipo, textoImagen)
+VALUES (2, 'Hamilton', 23, 3, 2, "");
 
-INSERT INTO pilotos (id, nombre, edad, id_equipo, textoImagen)
-VALUES (3, 'Verstappen', 42, 6, "");
+INSERT INTO pilotos (id, nombre, edad, victorias, id_equipo, textoImagen)
+VALUES (3, 'Verstappen', 42, 5, 6, "");
 
-INSERT INTO pilotos (id, nombre, edad, id_equipo, textoImagen)
-VALUES (4, 'Leclerc', 34, 4, "");
+INSERT INTO pilotos (id, nombre, edad, victorias, id_equipo, textoImagen)
+VALUES (4, 'Leclerc', 34, 4, 4, "");
 
-INSERT INTO pilotos (id, nombre, edad, id_equipo, textoImagen)
-VALUES (5, 'Bottas', 36, 3, "");
+INSERT INTO pilotos (id, nombre, edad, victorias, id_equipo, textoImagen)
+VALUES (5, 'Bottas', 36, 2, 3, "");
 
 INSERT INTO equipos (id, nombre, fundador, nacionalidad, origen, exitos, textoImagen)
 VALUES (1, 'Red Bull Racing', 'Dietrich Mateschitz', 'Austriaca', 'Compró el equipo Jaguar en 2004 y debutó en F1 en 2005', '6 Títulos de Constructores y 7 de Pilotos', '');
