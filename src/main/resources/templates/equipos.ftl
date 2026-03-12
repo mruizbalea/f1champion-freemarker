@@ -35,7 +35,7 @@
         <div class="container">
             <#list equipos as equipo>
                 <a href="/equipo/${equipo.id}">
-                    <img src="${equipo.imagen}" alt="${equipo.nombre}" />
+                    <img src="/img/Equipos/${equipo.imagen}" alt="${equipo.nombre}" />
                     <p>${equipo.nombre}</p>
                 </a>
             </#list>

@@ -73,7 +73,9 @@
 
         <div>
 
-            <form method="post" action="${destino}">
+            <form method="post" action="${destino}" enctype="multipart/form-data">
+
+                <input type="hidden" name="imagenActual" value="${imagen}">
 
                 <div>
                     <label>Nombre:</label>

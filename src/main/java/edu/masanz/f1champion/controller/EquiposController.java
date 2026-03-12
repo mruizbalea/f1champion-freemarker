@@ -4,6 +4,7 @@ import edu.masanz.f1champion.dao.EquiposDao;
 import edu.masanz.f1champion.model.Equipo;
 import edu.masanz.f1champion.model.Piloto;
 import io.javalin.http.Context;
+import io.javalin.http.UploadedFile;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
@@ -91,6 +92,18 @@ public class EquiposController {
         String origen = context.formParam("origen");
         String exitos = context.formParam("exitos");
 
+
+        String imagenActual = context.formParam("imagenActual");
+
+        UploadedFile imagen = context.uploadedFile("imagen");
+        String nombreImagenFinal;
+
+        if (imagen != null && !imagen.filename().isEmpty()) {
+            nombreImagenFinal = imagen.filename();
+        } else {
+            nombreImagenFinal = imagenActual;
+        }
+
         Equipo equipo = new Equipo();
         equipo.setId(id);
         equipo.setNombre(nombre);
@@ -98,6 +111,7 @@ public class EquiposController {
         equipo.setNacionalidad(nacionalidad);
         equipo.setOrigen(origen);
         equipo.setExitos(exitos);
+        equipo.setImagen(nombreImagenFinal);
 
         EquiposDao.actualizarEquipo(equipo);
 

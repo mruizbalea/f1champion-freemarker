@@ -33,7 +33,7 @@
     <h1>${equipo.nombre}</h1><br>
 
     <div>
-        <img src="${equipo.imagen}" alt="${equipo.nombre}" width="420vh"><br>
+        <img src="/img/Equipos/${equipo.imagen}" alt="${equipo.nombre}" width="420vh"><br>
     </div>
 
     <div class="texto">

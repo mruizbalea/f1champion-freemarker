@@ -54,7 +54,7 @@
                 <#list pilotos as piloto>
                     <div class="pilotos">
                         <a href="/piloto/${piloto.id}">
-                            <img src="${piloto.imagen}" alt="${piloto.nombre}">
+                            <img src="/img/Pilotos/${piloto.imagen}" alt="${piloto.nombre}">
                             <p>${piloto.nombre}</p>
                         </a>
                     </div>

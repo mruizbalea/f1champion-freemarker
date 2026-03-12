@@ -66,14 +66,15 @@
             <#assign edad = piloto.edad>
             <#assign victorias = piloto.victorias>
             <#assign idEquipo = piloto.idEquipo>
-            <#if piloto.imagen??>
-                <#assign imagen = piloto.imagen>
-            </#if>
+            <#assign imagen = piloto.imagen>
+
         </#if>
 
         <div>
 
             <form method="post" action="${destino}" enctype="multipart/form-data">
+
+                <input type="hidden" name="imagenActual" value="${imagen}">
 
                 <div>
                     <label>Nombre:</label>
