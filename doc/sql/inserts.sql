@@ -1,31 +1,38 @@
 USE f1_db;
 
-INSERT INTO pilotos (id, nombre, edad, victorias, id_equipo, textoImagen)
-VALUES (1, 'Alonso', 22, 2, 1, "");
+INSERT INTO pilotos (id, nombre, edad, victorias, id_equipo, textoImagen) VALUES
+(1, 'Alexander Albon', 29, 0, 5, '/img/Pilotos/alexander-albon-2026.png.png'),
+(2, 'Arvid Lindblad', 18, 0, 6, '/img/Pilotos/arvid-lindblad-2026.png.png'),
+(3, 'Carlos Sainz', 31, 4, 5, '/img/Pilotos/carlos-sainz-2026.png.png'),
+(4, 'Charles Leclerc', 28, 7, 4, '/img/Pilotos/charles-leclerc-2026.png.png'),
+(5, 'Esteban Ocon', 29, 1, 8, '/img/Pilotos/esteban-ocon-2026.png.png'),
+(6, 'Fernando Alonso', 44, 32, 7, '/img/Pilotos/fernando-alonso-2026_0.png.png'),
+(7, 'Franco Colapinto', 22, 0, 10, '/img/Pilotos/franco-colapinto-2026.png.png'),
+(8, 'Gabriel Bortoleto', 21, 0, 9, '/img/Pilotos/gabriel-bortoleto-2026.png.png'),
+(9, 'George Russell', 28, 2, 2, '/img/Pilotos/george-russell-2026.png.png'),
+(10, 'Isack Hadjar', 21, 0, 3, '/img/Pilotos/isack-hadjar-2026.png.png'),
+(11, 'Kimi Antonelli', 19, 0, 2, '/img/Pilotos/kimi-antonelli-2026.png.png'),
+(12, 'Lance Stroll', 27, 0, 7, '/img/Pilotos/lance-stroll-2026.png.png'),
+(13, 'Lando Norris', 26, 3, 1, '/img/Pilotos/lando-norris-2026_0.png.png'),
+(14, 'Lewis Hamilton', 41, 105, 4, '/img/Pilotos/lewis-hamilton-2026.png.png'),
+(15, 'Liam Lawson', 24, 0, 6, '/img/Pilotos/liam-lawson-2026_0.png.png'),
+(16, 'Max Verstappen', 28, 62, 3, '/img/Pilotos/max-verstappen-2026.png.png'),
+(17, 'Nico Hulkenberg', 38, 0, 9, '/img/Pilotos/nico-hulkenberg-2026.png.png'),
+(18, 'Oliver Bearman', 20, 0, 8, '/img/Pilotos/oliver-bearman-2026.png.png'),
+(19, 'Oscar Piastri', 24, 2, 1, '/img/Pilotos/oscar-piastr-2026.png.png'),
+(20, 'Pierre Gasly', 30, 1, 10, '/img/Pilotos/pierre-gasly-2026.png.png'),
+(21, 'Sergio Perez', 36, 6, 11, '/img/Pilotos/sergio-perez-2026.png.png'),
+(22, 'Valtteri Bottas', 36, 10, 11, '/img/Pilotos/valtteri-bottas-2026.png.png');
 
-INSERT INTO pilotos (id, nombre, edad, victorias, id_equipo, textoImagen)
-VALUES (2, 'Hamilton', 23, 3, 2, "");
-
-INSERT INTO pilotos (id, nombre, edad, victorias, id_equipo, textoImagen)
-VALUES (3, 'Verstappen', 42, 5, 6, "");
-
-INSERT INTO pilotos (id, nombre, edad, victorias, id_equipo, textoImagen)
-VALUES (4, 'Leclerc', 34, 4, 4, "");
-
-INSERT INTO pilotos (id, nombre, edad, victorias, id_equipo, textoImagen)
-VALUES (5, 'Bottas', 36, 2, 3, "");
-
-INSERT INTO equipos (id, nombre, fundador, nacionalidad, origen, exitos, textoImagen)
-VALUES (1, 'Red Bull Racing', 'Dietrich Mateschitz', 'Austriaca', 'Compró el equipo Jaguar en 2004 y debutó en F1 en 2005', '6 Títulos de Constructores y 7 de Pilotos', '');
-
-INSERT INTO equipos (id, nombre, fundador, nacionalidad, origen, exitos, textoImagen)
-VALUES (2, 'Mercedes-AMG', 'Gottlieb Daimler y Carl Benz', 'Alemana', 'Regresó como equipo integral en 2010 tras comprar Brawn GP', '8 Títulos de Constructores y 9 de Pilotos', '');
-
-INSERT INTO equipos (id, nombre, fundador, nacionalidad, origen, exitos, textoImagen)
-VALUES (3, 'Ferrari', 'Enzo Ferrari', 'Italiana', 'Único equipo presente en todas las temporadas desde 1950', '16 Títulos de Constructores y 15 de Pilotos', '');
-
-INSERT INTO equipos (id, nombre, fundador, nacionalidad, origen, exitos, textoImagen)
-VALUES (4, 'McLaren', 'Bruce McLaren', 'Británica', 'Fundado en 1963, debutó en el GP de Mónaco de 1966', '8 Títulos de Constructores y 12 de Pilotos', '');
-
-INSERT INTO equipos (id, nombre, fundador, nacionalidad, origen, exitos, textoImagen)
-VALUES (5, 'Alpine (Renault)', 'Louis Renault', 'Francesa', 'Debutó en 1977 introduciendo el motor turbo en la F1', '2 Títulos de Constructores y 2 de Pilotos (como Renault)', '');
+INSERT INTO equipos (id, nombre, fundador, nacionalidad, origen, exitos, textoImagen) VALUES
+(1, 'McLaren F1 Team', 'Bruce McLaren', 'Británica', 'Fundado en 1963, es uno de los equipos más antiguos y exitosos.', '8 Títulos de Constructores y 12 de Pilotos', '/img/Equipos/logo-mclaren-f1-2021.png'),
+(2, 'Mercedes-AMG Petronas', 'Ross Brawn / Mercedes', 'Alemana', 'Compró Brawn GP en 2010 regresando como constructor.', '8 Títulos de Constructores y 9 de Pilotos', '/img/Equipos/logo-mercedes-2026.png'),
+(3, 'Red Bull Racing', 'Dietrich Mateschitz', 'Austriaca', 'Compró el equipo Jaguar en 2004 y debutó en F1 en 2005', '6 Títulos de Constructores y 7 de Pilotos', '/img/Equipos/logo-red-bull-f1-2026.png'),
+(4, 'Scuderia Ferrari', 'Enzo Ferrari', 'Italiana', 'Único equipo presente en todas las temporadas desde 1950.', '16 Títulos de Constructores y 15 de Pilotos', '/img/Equipos/logo-ferrari-f1-2021.png.png'),
+(5, 'Williams Racing', 'Frank Williams', 'Británica', 'Fundado en 1977, dominó gran parte de los años 80 y 90.', '9 Títulos de Constructores y 7 de Pilotos', '/img/Equipos/logo-williams-f1-2026.png'),
+(6, 'RB Formula One Team', 'Red Bull GmbH', 'Italiana', 'Antiguo Minardi y Toro Rosso, funciona como equipo filial.', '2 Victorias en Grandes Premios (Vettel y Gasly)', '/img/Equipos/visa-rb-soymotor.2024.png.png'),
+(7, 'Aston Martin Aramco', 'Lionel Martin / Lawrence Stroll', 'Británica', 'Evolución de Racing Point y el histórico Jordan Grand Prix.', 'Múltiples podios y 1 pole position', '/img/Equipos/logo-ston-martin-2026.png'),
+(8, 'Haas F1 Team', 'Gene Haas', 'Estadounidense', 'Debutó en 2016 como el primer equipo americano en décadas.', '1 Pole Position y varios top 5', '/img/Equipos/logo-haas-f1-2021.png.png'),
+(9, 'Audi F1 Team', 'Audi AG', 'Alemana', 'Entrada oficial en 2026 tras adquirir el equipo Sauber.', 'Historial legendario en Le Mans y Rally', '/img/Equipos/logo-audi-f1-2026.png'),
+(10, 'Alpine F1 Team', 'Jean Rédélé', 'Francesa', 'Evolución de Renault F1 y el equipo Benetton.', '2 Títulos de Constructores (como Renault)', '/img/Equipos/logo-alpine-f1-2021.png.png'),
+(11, 'Cadillac F1 Team', 'Michael Andretti / GM', 'Estadounidense', 'Nuevo equipo que se incorpora a la parrilla en 2026.', 'Nuevo ingreso en la categoría', '/img/Equipos/logo-cadillac-f1-2026.png');

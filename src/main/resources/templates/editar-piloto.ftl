@@ -73,7 +73,7 @@
 
         <div>
 
-            <form method="post" action="${destino}">
+            <form method="post" action="${destino}" enctype="multipart/form-data">
 
                 <div>
                     <label>Nombre:</label>

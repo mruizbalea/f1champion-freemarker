@@ -93,7 +93,7 @@ public class PilotosController {
         int edad = Integer.parseInt(context.formParam("edad"));
         int victorias = Integer.parseInt(context.formParam("victorias"));
         int idEquipo = Integer.parseInt(context.formParam("idEquipo"));
-
+        UploadedFile imagen = context.uploadedFile("imagen");
 
 
         Piloto piloto = new Piloto();
@@ -102,6 +102,7 @@ public class PilotosController {
         piloto.setEdad(edad);
         piloto.setVictorias(victorias);
         piloto.setIdEquipo(idEquipo);
+        piloto.setImagen(imagen.toString());
 
         PilotosDao.actualizarPiloto(piloto);
 
