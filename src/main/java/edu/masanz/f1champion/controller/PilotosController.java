@@ -3,6 +3,7 @@ package edu.masanz.f1champion.controller;
 import edu.masanz.f1champion.Main;
 import edu.masanz.f1champion.dao.PilotosDao;
 import edu.masanz.f1champion.model.Piloto;
+import edu.masanz.f1champion.service.PilotosService;
 import io.javalin.http.Context;
 import io.javalin.http.UploadedFile;
 import org.apache.logging.log4j.LogManager;
@@ -19,11 +20,11 @@ public class PilotosController {
     public static void listarPilotos(Context context) {
         Map<String, Object> model = new HashMap<>();
 
-        List<Piloto> pilotos = PilotosDao.obtenerPilotos();
+        List<Piloto> pilotos = PilotosService.obtenerPilotos();
 
         for (Piloto piloto : pilotos) {
             if(piloto.getImagen() == null || piloto.getImagen().trim().isEmpty()){
-                piloto.setImagen("/img/Iconos/pilotoHD.jpg");
+                piloto.setImagen("pilotoHD.jpg");
             }
         }
 
@@ -36,10 +37,10 @@ public class PilotosController {
         Map<String, Object> model = new HashMap<>();
 
         int id = Integer.parseInt(context.pathParam("id"));
-        Piloto piloto = PilotosDao.obtenerPiloto(id);
+        Piloto piloto = PilotosService.obtenerPiloto(id);
 
         if(piloto.getImagen() == null || piloto.getImagen().trim().isEmpty()){
-            piloto.setImagen("/img/Iconos/pilotoHD.jpg");
+            piloto.setImagen("pilotoHD.jpg");
         }
 
         model.put("piloto", piloto);
@@ -53,11 +54,10 @@ public class PilotosController {
         int edad = 0;
         int victorias = 0;
         int idEquipo = 0;
-        String textoImagen = "";
 
         nombre = context.formParam("nombre");
         if (nombre == null || nombre.isEmpty()){
-            System.out.println("nombre = " + nombre);
+            logger.info("nombre = " + nombre);
             context.redirect("/inicio");
         }
         try {
@@ -69,19 +69,20 @@ public class PilotosController {
             context.redirect("/inicio");
         }
 
-        UploadedFile archivo = context.uploadedFile("imagen");
-        if (archivo != null) {
-            try {
-                byte[] contenido = archivo.content().readAllBytes();
-                String encodedString = Base64.getEncoder().encodeToString(contenido);
-                textoImagen = "data:image/png;base64,"+encodedString;
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+        String imagenActual = context.formParam("imagenActual");
+
+        UploadedFile imagen = context.uploadedFile("imagen");
+        String nombreImagenFinal;
+
+        if (imagen != null && !imagen.filename().isEmpty()) {
+            nombreImagenFinal = imagen.filename();
+        } else {
+            nombreImagenFinal = imagenActual;
         }
 
 
-        PilotosDao.crearPiloto(nombre, edad, victorias, idEquipo, textoImagen);
+
+        PilotosService.crearPiloto(nombre, edad, victorias, idEquipo, nombreImagenFinal);
 
         context.redirect("/pilotos");
     }
@@ -114,7 +115,7 @@ public class PilotosController {
         piloto.setIdEquipo(idEquipo);
         piloto.setImagen(nombreImagenFinal);
 
-        PilotosDao.actualizarPiloto(piloto);
+        PilotosService.actualizarPiloto(piloto);
 
         context.redirect("/pilotos");
     }
@@ -122,7 +123,7 @@ public class PilotosController {
     public static void eliminarPiloto(Context context) {
         int id = Integer.parseInt(context.pathParam("id"));
 
-        PilotosDao.eliminarPiloto(id);
+        PilotosService.eliminarPiloto(id);
 
         context.redirect("/pilotos");
     }
@@ -134,7 +135,7 @@ public class PilotosController {
         Map<String, String> pathParams = context.pathParamMap();
         if(pathParams.containsKey("id")){
             int id = Integer.parseInt(context.pathParam("id"));
-            Piloto piloto = PilotosDao.obtenerPiloto(id);
+            Piloto piloto = PilotosService.obtenerPiloto(id);
             model.put("piloto", piloto);
         }
 

@@ -2,11 +2,15 @@ package edu.masanz.f1champion.dao;
 
 import edu.masanz.f1champion.database.ConnectionManager;
 import edu.masanz.f1champion.model.Equipo;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class EquiposDao {
+
+    private static final Logger logger = LogManager.getLogger(EquiposDao.class);
 
     public static Equipo obtenerEquipo(int idEquipo) {
         String sql = "SELECT id, nombre, fundador, nacionalidad, origen, exitos, textoImagen FROM equipos WHERE id = ?";
@@ -62,9 +66,9 @@ public class EquiposDao {
         long id = ConnectionManager.ejecutarInsertSQL(sql, params);
 
         if (id > 0) {
-            System.out.println("Equipo insertado correctamente");
+            logger.info("Equipo insertado correctamente");
         } else {
-            System.out.println("Error en el insert de equipo");
+            logger.info("Error en el insert de equipo");
         }
     }
 
