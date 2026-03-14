@@ -3,8 +3,11 @@ package edu.masanz.f1champion.controller;
 import edu.masanz.f1champion.dao.EquiposDao;
 import edu.masanz.f1champion.model.Equipo;
 import edu.masanz.f1champion.model.Piloto;
+import edu.masanz.f1champion.service.EquiposService;
 import io.javalin.http.Context;
 import io.javalin.http.UploadedFile;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.HashMap;
@@ -13,14 +16,16 @@ import java.util.Map;
 
 public class EquiposController {
 
+    private static final Logger logger = LogManager.getLogger(EquiposController.class);
+
     public static void listarEquipos(Context context) {
         Map<String, Object> model = new HashMap<>();
 
-        List<Equipo> equipos = EquiposDao.obtenerEquipos();
+        List<Equipo> equipos = EquiposService.obtenerEquipos();
 
         for (Equipo equipo : equipos) {
             if(equipo.getImagen() == null || equipo.getImagen().trim().isEmpty()){
-                equipo.setImagen("/img/Iconos/logooo.png");
+                equipo.setImagen("logooo.png");
             }
         }
 
@@ -33,10 +38,10 @@ public class EquiposController {
         Map<String, Object> model = new HashMap<>();
 
         int id = Integer.parseInt(context.pathParam("id"));
-        Equipo equipo = EquiposDao.obtenerEquipo(id);
+        Equipo equipo = EquiposService.obtenerEquipo(id);
 
         if(equipo.getImagen() == null || equipo.getImagen().trim().isEmpty()){
-            equipo.setImagen("/img/Iconos/logooo.png");
+            equipo.setImagen("logooo.png");
         }
 
         model.put("equipo", equipo);
@@ -54,31 +59,42 @@ public class EquiposController {
 
         nombre = context.formParam("nombre");
         if (nombre == null || nombre.isEmpty()){
-            System.out.println("nombre = " + nombre);
+            logger.info("nombre = " + nombre);
             context.redirect("/inicio");
         }
         fundador = context.formParam("fundador");
         if (fundador == null || fundador.isEmpty()){
-            System.out.println("fundador = " + fundador);
+            logger.info("fundador = " + fundador);
             context.redirect("/inicio");
         }
         nacionalidad = context.formParam("nacionalidad");
         if (nacionalidad == null || nacionalidad.isEmpty()){
-            System.out.println("nacionalidad = " + nacionalidad);
+            logger.info("nacionalidad = " + nacionalidad);
             context.redirect("/inicio");
         }
         origen = context.formParam("origen");
         if (origen == null || origen.isEmpty()){
-            System.out.println("origen = " + origen);
+            logger.info("origen = " + origen);
             context.redirect("/inicio");
         }
         exitos = context.formParam("exitos");
         if (exitos == null || exitos.isEmpty()){
-            System.out.println("exitos = " + exitos);
+            logger.info("exitos = " + exitos);
             context.redirect("/inicio");
         }
 
-        EquiposDao.crearEquipo(nombre, fundador, nacionalidad, origen, exitos, "");
+        String imagenActual = context.formParam("imagenActual");
+
+        UploadedFile imagen = context.uploadedFile("imagen");
+        String nombreImagenFinal;
+
+        if (imagen != null && !imagen.filename().isEmpty()) {
+            nombreImagenFinal = imagen.filename();
+        } else {
+            nombreImagenFinal = imagenActual;
+        }
+
+        EquiposService.crearEquipo(nombre, fundador, nacionalidad, origen, exitos, nombreImagenFinal);
 
         context.redirect("/equipos");
     }
@@ -113,7 +129,7 @@ public class EquiposController {
         equipo.setExitos(exitos);
         equipo.setImagen(nombreImagenFinal);
 
-        EquiposDao.actualizarEquipo(equipo);
+        EquiposService.actualizarEquipo(equipo);
 
         context.redirect("/equipos");
     }
@@ -121,7 +137,7 @@ public class EquiposController {
     public static void eliminarEquipo(Context context) {
         int id = Integer.parseInt(context.pathParam("id"));
 
-        EquiposDao.eliminarEquipo(id);
+        EquiposService.eliminarEquipo(id);
 
         context.redirect("/equipos");
     }
@@ -133,7 +149,7 @@ public class EquiposController {
         Map<String, String> pathParams = context.pathParamMap();
         if(pathParams.containsKey("id")){
             int id = Integer.parseInt(context.pathParam("id"));
-            Equipo equipo = EquiposDao.obtenerEquipo(id);
+            Equipo equipo = EquiposService.obtenerEquipo(id);
             model.put("equipo", equipo);
         }
 

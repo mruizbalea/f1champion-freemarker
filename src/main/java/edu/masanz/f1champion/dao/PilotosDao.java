@@ -1,12 +1,17 @@
 package edu.masanz.f1champion.dao;
 
+import edu.masanz.f1champion.Main;
 import edu.masanz.f1champion.database.ConnectionManager;
 import edu.masanz.f1champion.model.Piloto;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class PilotosDao {
+
+    private static final Logger logger = LogManager.getLogger(PilotosDao.class);
 
     public static Piloto obtenerPiloto(int idPiloto) {
         String sql = "SELECT id, nombre, edad, victorias, id_equipo, textoImagen FROM pilotos WHERE id = ?";
@@ -60,9 +65,9 @@ public class PilotosDao {
         long id = ConnectionManager.ejecutarInsertSQL(sql, params);
 
         if (id > 0) {
-            System.out.println("Piloto insertado correctamente");
+            logger.info("Piloto insertado correctamente");
         } else {
-            System.out.println("Error en el insert de piloto");
+            logger.info("Error en el insert de piloto");
         }
     }
 
