@@ -148,4 +148,9 @@
             line-height: 8vh;
         }
 
-        
+        .editar {
+            margin-bottom: 3vh;
+            height: 5vh;
+            border-radius: 3vh;
+            width: 100%;
+        }

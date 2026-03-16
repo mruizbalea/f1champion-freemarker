@@ -78,22 +78,22 @@
 
                 <div>
                     <label>Nombre:</label>
-                    <input type="text" name="nombre" value="${nombre}" required>
+                    <input class="editar" type="text" name="nombre" value="${nombre}" required>
                 </div>
 
                 <div>
                     <label>Edad:</label>
-                    <input type="number" name="edad" value="${edad}" required>
+                    <input class="editar" type="number" name="edad" value="${edad}" required>
                 </div>
 
                 <div>
                     <label>Victorias:</label>
-                    <input type="number" name="victorias" value="${victorias}" required>
+                    <input class="editar" type="number" name="victorias" value="${victorias}" required>
                 </div>
 
                 <div>
                     <label>ID Equipo:</label>
-                    <input type="number" name="idEquipo" value="${idEquipo}" required>
+                    <input class="editar" type="number" name="idEquipo" value="${idEquipo}" required>
                 </div>
 
                 <img src="${imagen}">

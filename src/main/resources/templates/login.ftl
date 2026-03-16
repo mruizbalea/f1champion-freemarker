@@ -115,9 +115,9 @@
 
         <div class="form">
              <form method="post" action="/login">
-                 <label for="Email" class="labels">Email</label><br>
+                 <label for="username" class="labels">Email</label><br>
                  <input name="username" type="text" placeholder="tu.correo@ejemplo.com"><br><br>
-                 <label for="Contraseña" class="labels">Contraseña</label><br>
+                 <label for="password" class="labels">Contraseña</label><br>
                  <input name="password" type="password" placeholder="********"><br>
                  <input type="submit" value="Iniciar sesión" class="inicio_sesion">
              </form>

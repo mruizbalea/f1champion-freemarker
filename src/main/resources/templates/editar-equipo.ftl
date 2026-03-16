@@ -75,31 +75,31 @@
 
             <form method="post" action="${destino}" enctype="multipart/form-data">
 
-                <input type="hidden" name="imagenActual" value="${imagen}">
+                <input class="editar" type="hidden" name="imagenActual" value="${imagen}">
 
                 <div>
                     <label>Nombre:</label>
-                    <input type="text" name="nombre" value="${nombre}" required>
+                    <input class="editar" type="text" name="nombre" value="${nombre}" required>
                 </div>
 
                 <div>
                     <label>Fundador:</label>
-                    <input type="text" name="fundador" value="${fundador}" required>
+                    <input class="editar" type="text" name="fundador" value="${fundador}" required>
                 </div>
 
                 <div>
                     <label>Nacionalidad:</label>
-                    <input type="text" name="nacionalidad" value="${nacionalidad}" required>
+                    <input class="editar" type="text" name="nacionalidad" value="${nacionalidad}" required>
                 </div>
 
                 <div>
                     <label>Origen:</label>
-                    <input type="text" name="origen" value="${origen}" required>
+                    <input class="editar" type="text" name="origen" value="${origen}" required>
                 </div>
 
                 <div>
                     <label>Exitos:</label>
-                    <input type="text" name="exitos" value="${exitos}" required>
+                    <input class="editar" type="text" name="exitos" value="${exitos}" required>
                 </div>
 
                 <img src="${imagen}">
