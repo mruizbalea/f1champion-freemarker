@@ -1,73 +1,73 @@
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inicio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" type="text/css" href="/css/Styles.css"/>
+    <style>
 
-<link rel="stylesheet" href="/css/Styles.css">
+        body {
+            width: 100%;
+            height: 100vh;
+        }
 
-<style>
+        div {
+            width: 100%;
+        }
 
-body{
-width:100%;
-height:100vh;
-}
+        .boton {
+            margin: 1vh;
+        }
 
-div{
-width:100%;
-}
+        .bajo {
+            background-color: red;
+            
+        }
 
-.boton{
-margin:1vh;
-}
+        .terminos {
+            
+            color: white;
+        }
 
-.bajo{
-background-color:red;
-}
-
-.terminos{
-color:white;
-}
-
-.fondo{
-overflow:hidden;
-}
-
-</style>
-
+        input:checked ~ .terminos {
+            display: none;
+            opacity: 0;
+            
+        }
+        
+        .fondo {
+            
+            overflow: hidden;
+        }
+        
+    </style>
 </head>
-
 <body>
 
-<#include "menu.ftl">
+    <#include "menu.ftl">
 
-<div>
+    <div>
+        <img src="img\Iconos\formula1.jpg" class="fondo"><br>
+        <div>
+            <p>¿Qué quieres hacer?</p>
+        </div>
+        
 
-<img src="/img/Iconos/formula1.jpg" class="fondo">
-
-<div>
-<p>¿Qué quieres hacer?</p>
-</div>
-
-<div>
-<a href="/equipos" class="boton">Equipos</a>
-</div>
-
-<div>
-<a href="/pilotos" class="boton">Pilotos</a>
-</div>
-
-<div>
-<a href="/clasificacion" class="boton">Clasificación</a>
-</div>
-
-</div>
-
-<hr>
-
-<div class="bajo">
-<p class="terminos">Términos y condiciones</p>
-</div>
+        <div>
+            <a href="/equipos" class="boton">Equipos</a>
+        </div>
+        <div>
+            <a href="/pilotos" class="boton">Pilotos</a>
+        </div>
+        <div>
+            <a href="/clasificacion" class="boton">Clasificación</a>
+        </div>  
+    </div>
+              
+    <hr>
+    <div class="bajo">
+        <p class="terminos">Términos y condiciones</p>
+    </div>
 
 </body>
 </html>

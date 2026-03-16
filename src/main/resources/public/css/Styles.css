@@ -1,744 +1,151 @@
-/* GENERAL */
-
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-/* BODY */
-
-    body{
-    font-family:"Roboto", sans-serif;
-    background:white;
-    color: black;
-    text-align:center;
-    width:100%;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-    margin: 0;
-    min-height: 100vh;
-}
-
-/* HEADER */
-
-    .encabezado{
-        position: absolute;
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        padding:10px 30px;
-        width:100%;
-        top: 0;
-        left: 0;
-        z-index: 10;
-    }
-
-    .hamburguesa {
-        font-size: 40px;
-        cursor: pointer;
-    }
-
-    .menu_img1 {
-        height: 90px;
-    }
-
-    .menu_img2 {
-        height: 50px;
-    }
-
-/* BOTONES */
-
-    .boton {
-        margin: 40px auto;
-        width: 300px;
-        background-color: #C00000;
-        color: white;
-        border: none;
-        padding: 12px;
-        border-radius: 1000px;
-        margin-bottom: 10px;
-        display: block;
-        font-size: 16px;
-        cursor: pointer;
-        font-weight: bold;
-        text-decoration: none;
-        text-align: center;
-    }
-
-/* FOOTER */
-
-    .footer {
-        background-color:#C00000;
-        color:white;
-        width: 100%;
-        height: auto;
-        padding:20px;
-        display:flex;
-        flex-direction:column;
-        align-items:flex-start;
-        margin-top: auto;
-    }
-
-    .footer_logo {
-        height: auto;
-        width: 60px;
-        margin-bottom: 10px;
-    }
-
-    .terminos {
-        font-size: 14px;
-        font-weight: bold;
-    }
-
-    .copyright {
-        font-size: 16px;
-        font-weight: bold;
-    }
-
-/* LOGIN */
-
-        .login{
-            background-color: white;
-            font-family: "Roboto", sans-serif;
-            text-align: center;
-            margin:auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+        * {
+            box-sizing: border-box;
         }
 
-        .logo {
-            padding: 20px;
-            margin: 80px auto 40px auto;
-        }
-
-        .logo img{
-            width: 400px;
-            height: auto;
-        }
-
-        .form {
-            margin: 30px auto;
-            width: 90%;
-            max-width: 400px;
-            text-align: center;
-        }
-
-        .labels {
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 7px;
-            margin-top: 10px;
-            display: block;
-
-        }
-
-        .box {
-            width: 100%;
-            padding: 8px 12px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            height: 50px;
-            margin-bottom: 15px;
-        }
-
-        .inicio_sesion {
-            margin: 30px auto 20px auto;
-            width: 300;
-            background-color: #C00000;
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 1000px;
-            margin-bottom: 50px;
-            display: block;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .texto {
-            margin: auto;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            width: 300px;
-            font-size: 14px;
-            color: black;
-        }
-
-        a:visited {
-            color: black;
-        }
-
-        a:hover {
-            color: #C00000;
-        }
-
-        a:active {
-            color: purple;
-        }
-
-        .google {
-            color:black;
-            border:none;
-            font-size:14px;
-            cursor:pointer;
-        }
-
-        .botones_login{
-            display:flex;
-            justify-content:center;
-            gap:15px;
-            margin-top:20px;
-        }
-
-        .botones_login span{
-        border:1px solid #ccc;
-        border-radius:10px;
-        background:white;
-        padding:14px 20px;
-        width:180px;
-        text-align:center;
-        font-size:14px;
-        }
-
-        .boton:visited{
-            color:white;
-        }
-
-        .olvidado {
-            margin: 50px 50px 20px 50px;
-            width: 300px;
-            font-size: 15px;
-        }
-
-
-        input[type=submit] {
-            color: white;
-        }
-
-        /* MENU */
-
-        #menu {
-            position: relative;
-        }
-
-        .burger {
-            font-size: 40px;
-            cursor: pointer;
-            color: white;
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 2000;
-        }
-
-        .inicio .hamburguesa {
-        font-size: 50px;
-        cursor: pointer;
-        color: white;
-        }
-
-        body.inicio {
+        body {
             margin: 0;
-            padding: 0;
-            font-family: "Roboto", sans-serif;
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        #lista {
-            position:fixed;
-            top:0;
-            left:-260px;
-            width:260px;
-            height:100vh;
-            background:#C00000;
-            padding:80px 20px;
-            transition:0.4s;
-            z-index: 1000;
-        }
-
-        #lista ul {
-            list-style: none;
-            padding: 0;
-            font-family: "Roboto", sans-serif;
-            font-weight: bold;
-        }
-
-        #lista li {
-            margin: 25px 0;
-        }
-
-        #lista a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        .logo_menu {
-            position: absolute;
-            bottom: 30px;
-            left: 20px;
-            width: 100px;
-        }
-
-        #checkbox {
-            display: none;
-        }
-
-        #checkbox:checked ~ #lista {
-            display: block;
-            left: 0;
-        }
-
-        #checkbox:checked + .burger .hamburguesa{
-            content:"✖";
-        }
-
-         /* INICIO */
-
-
-        .banner {
+            font-family: Arial, Helvetica, sans-serif;
             width: 100%;
-            height: 600px;
-            position: relative;
-            overflow: hidden;
-            background-color: black;
         }
 
-        .banner_botones {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            color: white;
-        }
-
-        .imagen-fondo {
-            width: 100%;
-            position: absolute;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            object-fit: cover;
-            min-height: 300px;
-        }
-        .fondo {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .titulo {
-            position: absolute;
-            bottom: 20px;
-            left: 0;
-            width: 100%;
+        .header {
             text-align: center;
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            font-family: "Roboto", sans-serif;
-        }
-
-        .copyright {
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .dropdown { position: relative; display: inline-block; }
-
-        .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    }
-    .dropdown-content a { color: black; padding: 12px 16px; text-decoration: none; display: block; }
-    .dropdown-content a:hover { background-color: #f1f1f1; }
-
-        /* PILOTO */
-
-        .Piloto .hamburguesa {
-            color: black;
-        }
-
-        .nombre {
-            font-size: x-large;
-            margin-bottom: 0;
-            text-align: center;
-        }
-
-        .equipo {
-            font-size: small;
-            text-align: center;
-        }
-
-        .pistas {
-            justify-content: space-evenly;
-            margin-bottom: 2vh;
-        }
-
-        .pista {
-            width: 50%;
-        }
-
-        .foto-piloto {
-            margin-top: 20px;
-            width: 250px;
-            height: 250px;
-        }
-
-        /* PILOTOS */
-
-        .Pilotos .hamburguesa {
-            color: black;
-        }
-
-        label {
-            font-size: larger;
-
-        }
-
-        .pilotos {
-            justify-content: space-evenly;
-
-        }
-
-        .pilotos img {
-            width: 15vh;
-        }
-
-        .contenido {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 5px;
-            padding: 0 5px;
-            max-width: 200px;
-            margin: 30px auto;
-        }
-
-        /* EQUIPO */
-
-        .Equipo .hamburguesa{
-            color: black;
-        }
-
-        li {
-            margin: 1vh;
-        }
-
-        .logo-escuderia {
-            margin-top: 20px;
-            width: 100%;
-            height: auto;
-            border-radius: 6px;
-        }
-
-        .Equipo {
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            gap: 12px;
-            width: 320px;
-            margin: 30px auto;
-        }
-
-        /* EQUIPOS */
-
-        .Equipos {
-            padding-top: 20px;
-        }
-
-        .pagina-equipos h1{
-            margin-top: 20px;
-            margin-bottom: 20px;
-            font-size: 28px;
+            padding: 32px;
         }
 
         .container {
-            display:grid;
-            grid-template-columns:repeat(2,1fr);
-            gap:15px;
-            width:340px;
-            margin:30px auto;
-        }
-
-        .Equipos .hamburguesa {
-            color: black;
-        }
-
-        .container img {
-            width: 100%;
-            height: auto;
-            border-radius: 6px;
-        }
-
-        .container a {
-            text-decoration: none;
-            color: black;
-            font-size: 20px;
-            font-family: "Roboto", sans-serif;
-            font-weight: bold;
-        }
-
-        /* GRANDPRIX */
-
-        .GrandPrix {
             display: flex;
-            justify-content: space-evenly;
             flex-wrap: wrap;
-            gap: 20px;
-            padding-top: 20px;
-        }
-
-        .GrandPrix .hamburguesa {
-            color: black;
-        }
-
-        .GrandPrix select{
-            display:block;
-            margin:25px auto;
-            padding:16px 18px !important;
-            font-size:20px;
-            border-radius:8px;
-            border:1px solid #999;
-            width:300px;
-            background:white;
-            margin-top: 90px;
-            color: #444 !important;
-        }
-
-        .GrandPrix .boton{
-        display:block;
-        width:300px;
-        margin:50px auto;
-        padding:16px;
-        background:#c00000;
-        color:white;
-        border-radius:40px;
-        font-size:18px;
-        font-weight:bold;
-        text-align:center;
-        text-decoration:none;
-        }
-
-        .fotos {
-            justify-content: space-evenly;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 14px;
-            margin-top: 40px;
-            margin: 20px auto;
-            width: 300px;
-        }
-
-        .fotos a {
-            display:flex;
-            align-items:center;
-            gap:20px;
-            width:90%;
-            max-width:300px;
-            padding:10px;
-            border-radius:10px;
-            font-size: 22px;
-        }
-
-        .fotos img {
-            width: 80px;
-            height: auto;
-        }
-
-        .fotos p {
-            font-size: 18px;
-            color: #555;
-            margin: 0;
-        }
-
-        select {
-            margin:25px auto;
-            display:block;
-            padding:10px 20px;
-            font-size:16px;
-            border-radius:8px;
-            border:1px solid #ccc;
-            width:200px;
-            margin-top: -20px;
-            font-family: "Roboto", sans-serif;
-            color: white;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        /* GP AUSTRALIA */
-
-        .GPAustralia {
-            padding-top: 120px;
-        }
-
-        .GPAustralia .titulo {
-            position: static;
-            font-size: 30px;
-            margin-bottom: 20px;
-            color: black;
-            font-family: "Roboto", sans-serif;
-        }
-
-        .GPAustralia img[alt="circuito_img"]{
-            width:90%;
-            max-width:500px;
-            margin:40px auto;
-            display:block;
-        }
-
-        .GPAustralia .texto{
-            width:500px;
-            margin:25px auto;
-            text-align:left;
-            max-width: 90%;
-            font-size: 22px;
-        }
-
-        .GPAustralia ul{
-            list-style:none;
-            padding:0;
-        }
-
-        .GPAustralia li{
-            display:flex;
-            align-items:center;
-            gap: 18px;
-            margin:25px 0;
-            font-size:20px;
-        }
-
-        .GPAustralia .boton {
-            margin: 40px auto;
-            width: 300px;
-        }
-
-        .GPAustralia .hamburguesa{
-            color: black;
-        }
-
-        .circuito_img {
-            margin-top: 20px;
-            width: 250px;
-            height: 200px;
-        }
-
-        /* CLASIFICACION */
-
-        .clasificacion .hamburguesa {
-            font-size: 50px;
-            cursor: pointer;
-            color: white;
-        }
-
-        .clasificacion .titulo {
-            position: absolute;
-            bottom: 20px;
-            left: 0;
+            padding: 0.5vh;
             width: 100%;
-            text-align: center;
-            color: red;
-            font-size: 24px;
-            font-weight: bold;
-            font-family: "Roboto", sans-serif;
+
         }
 
-        .clasificacion {
-            background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../../src/main/resources/public/img/Iconos/classfondo.png");            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            font-family: "Roboto", sans-serif;
-            min-height: 100vh;
-            padding-top: 90px;
+        .column a {
+            vertical-align: middle;
+            width: 50%;
+            margin:0;
+            padding: 0;
         }
+
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .boton {
+            margin-bottom: 1vh;
+            background-color: red;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            font-size: 20px;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 2vh;
+            
+        }
+
+       
 
         h1 {
-            margin-bottom: 5px;
-            font-size: 24px;
-            text-transform: uppercase;
-            color: #e10600;
-        }
-
-        table {
-            border-collapse: collapse;
-            margin-top: 30px auto;
-            margin-bottom: 2vh;
-            width: 90%;
-            max-width: 1000px;
-            margin: auto;
-            border-radius: 8px;
-            font-family: "Roboto", sans-serif;
-            color: white;
-        }
-
-        th, td {
-            padding: 8px;
-            border-bottom:1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        th {
-            color: white;
-            padding: 10px;
             text-align: center;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            border-bottom: 1px solid #444;
         }
-
-        td {
-            padding: 12px 5px;
-            border-bottom: 1px solid #eee;
+        
+        .logo img {
             text-align: center;
-            font-size: 13px;
+        }
+        
+
+        .boton:hover {
+            opacity: 1;
+            
         }
 
-        tr:nth-child(3) {
-            color: #e10600;
-            font-weight: bold;
+        #lista{
+            display: none;
         }
 
-        tr:hover {
-            background-color: #f1f1f1;
+        #menu img{
+            position: relative;
+        
+        }
+        
+        input#checkbox {
+            display: none;
+        }
+        
+        input:checked ~ #lista{
+            width: 100%;
+            display: block;
+            height: 100%;
+            position:absolute;
+            background-color: red;
+            top: 13vh;
         }
 
-        td a {
+        
+        input:checked ~ a.boton{
+            display: none;
+            position:absolute;
+            opacity: 0;
+            
+            
+        }
+
+        
+        #lista ul{
+            margin: 2vh;
+
+        }
+
+        #lista ul li a{
+            color:white;
             text-decoration: none;
-            color: white;
-            font-weight: bold;
+            margin: 2vh;
+           
         }
 
-        td a:hover {
-            text-decoration: underline;
+        #menu{
+            background-color: none;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
         }
 
-        #selector {
-            padding: 5px 15px;
-            border-radius: 5px;
-            border: 1px solid #555;
-            font-family: "Roboto", sans-serif;
+
+        .burger {
+            box-sizing: border-box;
+            display: inline-block;
+            border: 0.3vh solid black;
+            border-radius: 1.5vh;
+            width: 8vh;
+            height: 8vh;
             font-weight: bold;
-            cursor: pointer;
-            margin-bottom: 20px;
+            text-align: center;
+            user-select: none;
+        }
+
+        .menu_img1 {
+            height: 13vh;
+        }
+
+        .menu_img2 {
+            width: 9vh;
+        }
+
+        .hamburguesa {
             color: black;
-       }
+            font-size: 5vh;
+            vertical-align: middle;
+            line-height: 8vh;
+        }
 
-       label[for="selector"] {
-            margin-right: 10px;
-       }
+        
